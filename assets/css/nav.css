@@ -1,10 +1,59 @@
-ul.mobile-nav {
+nav {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+}
+
+.mobile-nav-container {
+  position: relative;
+  border-bottom: 2px solid var(--color-outline);
+}
+
+.menu-icon {
+  display: block;
+  width: fit-content;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.mobile-nav, .desktop-nav {
   display: none;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
-.menu-icon {
-  display: none;
+.mobile-nav.active {
+  position: absolute;
+  top: 100%; /* Bottom of nav container because of position: relative  */
+  left: 0;
+  z-index: 1;
+}
+
+.mobile-nav li {
+  width: inherit;
+  border-bottom: 2px solid var(--color-outline);
+  cursor: pointer;
+}
+
+.mobile-nav li a {
+  display: block;
+  padding: 1rem 2rem;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.learn a {
+  background-color: var(--color-text-accent);
+  color: var(--color-text-light);
+}
+
+.practice a {
+  background-color: var(--color-secondary-light);
+  color: var(--color-text-light);
+}
+
+.quiz a {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-dark);
 }

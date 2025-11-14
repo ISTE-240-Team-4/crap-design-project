@@ -1,0 +1,52 @@
+main {
+  text-align: center;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+  height: 80vh;
+  border-bottom: 2px solid var(--color-outline);
+}
+
+.hero {
+  position: relative;
+  width: fit-content; /* Set width to width of CRAP title for "this" to be positioned correctly */
+}
+
+.this {
+  position: absolute;
+  top: -8px;
+  left: 1rem;
+  font-family: var(--font-family-primary);
+  font-size: clamp(var(--font-size-body-mobile), 8vw, var(--font-size-xl));
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Potential refactor to separate class when making other pages */
+.crap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-semibold);
+}
+
+.crap span:first-of-type {
+  margin-left: 1rem;
+}
+
+header h2 {
+  font-size: var(--font-size-heading-mobile);
+  color: var(--color-secondary-dark);
+}
+
+@media screen and (min-width: 900px) {
+  .this {
+    top: 4px;
+  }
+}

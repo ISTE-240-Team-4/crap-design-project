@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $page; ?></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/theme.css">
+  <link rel="stylesheet" href="<?php echo $path; ?>assets/css/grid.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/nav.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/footer.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/index.css">
@@ -14,21 +14,27 @@
 </head>
 <body>
   <nav>
-    <ul class="desktop-nav">
-      <li><a href="<?php echo $path; ?>pages/index.php">LEARN</a></li>
-      <li><a href="<?php echo $path; ?>pages/practice.php">PRACTICE</a></li>
-      <li><a href="<?php echo $path; ?>pages/quiz.php">QUIZ</a></li>
-    </ul>
+    <div class="mobile-nav-container">
+      <div>
+        <a href="javascript:void(0);" class="menu-icon" onclick="mobileNavToggle()">
+          <svg width="30" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.00373088 22.7823C0.00373093 21.5982 0.834751 20.5776 1.99732 20.3451L25.0161 15.6601C26.5576 15.3458 28 16.5256 28 18.0973C28 19.2815 27.169 20.302 26.0064 20.5346L2.98764 25.2195C1.44617 25.5339 0.00373081 24.354 0.00373088 22.7823Z" fill="#0019D8"/>
+            <path d="M28 10.2902C28 11.4744 27.169 12.4949 26.0064 12.7274L2.98764 17.4124C1.44617 17.7268 0.00371937 16.5469 0.00371944 14.9752C0.00371949 13.791 0.83474 12.7705 1.99731 12.538L25.0161 7.85298C26.5576 7.53864 28 8.7185 28 10.2902Z" fill="#0019D8"/>
+            <path d="M0.00373088 7.17294C0.00373093 5.98878 0.834751 4.96824 1.99732 4.73571L25.0161 0.0507373C26.5576 -0.263605 28 0.916256 28 2.48797C28 3.67213 27.169 4.69265 26.0064 4.92518L2.98764 9.61017C1.44617 9.92451 0.00373081 8.74465 0.00373088 7.17294Z" fill="#0019D8"/>
+          </svg>
+        </a>
+      </div>
 
-    <ul class="mobile-nav">
-      <li><a href="<?php echo $path; ?>pages/index.php">LEARN</a></li>
-      <li><a href="<?php echo $path; ?>pages/practice.php">PRACTICE</a></li>
-      <li><a href="<?php echo $path; ?>pages/quiz.php">QUIZ</a></li>
-    </ul>
-
-    <div>
-      <a href="javascript:void(0);" class="menu-icon" onclick="mobileNavToggle()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <ul class="mobile-nav">
+        <li class="learn"><a href="<?php echo $path; ?>pages/index.php">LEARN</a></li>
+        <li class="practice"><a href="<?php echo $path; ?>pages/practice.php">PRACTICE</a></li>
+        <li class="quiz"><a href="<?php echo $path; ?>pages/quiz.php">QUIZ</a></li>
+      </ul>
     </div>
+
+    <ul class="desktop-nav">
+      <li class="learn"><a href="<?php echo $path; ?>pages/index.php">LEARN</a></li>
+      <li class="practice"><a href="<?php echo $path; ?>pages/practice.php">PRACTICE</a></li>
+      <li class="quiz"><a href="<?php echo $path; ?>pages/quiz.php">QUIZ</a></li>
+    </ul>
   </nav>

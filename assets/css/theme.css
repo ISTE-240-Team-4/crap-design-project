@@ -3,10 +3,11 @@
 :root {
   --color-primary-light: #CCC1E3;
   --color-primary-dark: #7E4FE3;
-  --color-secondary: #0019D9;
+  --color-secondary-light: #0019D9;
+  --color-secondary-dark: #080066;
   --color-background: #EDEDED;
   --color-outline: #DADADA;
-  --color-text-white: #F6F5FA;
+  --color-text-light: #F6F5FA;
   --color-text-dark: #120038;
   --color-text-accent: #7E4FE3;
   --color-text-caption: #DADADA;
@@ -20,10 +21,21 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --font-size-body: 20px;
-  --font-size-hero: 120px;
-  --font-size-lg: 40px;
-  --font-size-xl: 70px;
+  --font-size-body-mobile: 16px;
+  --font-size-body-desktop: 20px;
+
+  --font-size-caption-mobile: 14px;
+  --font-size-caption-desktop: 18px;
+
+  --font-size-heading-mobile: 16px
+  --font-size-heading-desktop: 20px;
+
+  --font-size-hero: clamp(72px, 32vw, 350px);
+
+  --font-size-sm: 12px;
+  --font-size-md: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 48px;
 }
 
 /* Default Styles */
@@ -63,7 +75,7 @@ p {
 .primary-button {
   background-color: var(--color-primary-dark);
   color: var(--color-text-accent);
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   text-transform: capitalize;
   padding: 4px 8px;
   cursor: pointer;
@@ -77,7 +89,7 @@ p {
 
 .primary-button:active {
   background-color: var(--color-primary-dark);
-  color: var(--color-text-white);
+  color: var(--color-text-light);
 }
 
 /* CSS Resets */
@@ -92,9 +104,13 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
+  min-width: 350px;
   line-height: 1.6;
-  font-size: var(--font-size-body);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body-mobile);
 }
 
 h1, h2, h3, h4, button, input, label {
@@ -108,4 +124,10 @@ h1, h2, h3, h4 {
 input, button, textarea, select {
   font-family: inherit;
   font-size: inherit;
+}
+
+@media screen and (min-width: 60rem) {
+  body {
+    font-size: var(--font-size-body-desktop);
+  }
 }
