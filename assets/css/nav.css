@@ -12,10 +12,15 @@ nav {
 .menu-icon {
   display: block;
   width: fit-content;
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
-.mobile-nav, .desktop-nav {
+.menu-icon.active {
+  animation: flip 1s forwards;
+  animation-timing-function: var(--timing-function-logo);
+}
+
+.desktop-nav {
   display: none;
   list-style-type: none;
   padding: 0;
@@ -23,11 +28,29 @@ nav {
   width: 100%;
 }
 
-.mobile-nav.active {
+.mobile-nav {
+  display: block;
+  opacity: 0;
   position: absolute;
   top: 100%; /* Bottom of nav container because of position: relative  */
   left: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
   z-index: 1;
+}
+
+.mobile-nav.active {
+  animation: slideDown 0.4s forwards;
+  animation-timing-function: var(--timing-function-mobile-nav);
+  transform-origin: top center;
+}
+
+.mobile-nav.closing {
+  animation: slideUp 0.4s forwards;
+  animation-timing-function: var(--timing-function-mobile-nav);
+  transform-origin: top center;
 }
 
 .mobile-nav li {

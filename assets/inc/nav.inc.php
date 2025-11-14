@@ -6,6 +6,7 @@
   <title><?php echo $page; ?></title>
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/theme.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/grid.css">
+  <link rel="stylesheet" href="<?php echo $path; ?>assets/css/animation.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/nav.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/footer.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/index.css">

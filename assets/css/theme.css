@@ -36,6 +36,9 @@
   --font-size-md: 18px;
   --font-size-lg: 24px;
   --font-size-xl: 48px;
+
+  --timing-function-logo: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --timing-function-mobile-nav: cubic-bezier(0.25, 0.84, 0.44, 1);
 }
 
 /* Default Styles */
