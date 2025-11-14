@@ -10,7 +10,7 @@
   --color-text-light: #F6F5FA;
   --color-text-dark: #120038;
   --color-text-accent: #7E4FE3;
-  --color-text-caption: #DADADA;
+  --color-text-caption: #606060;
 
   --font-family-primary: "Albert Sans", sans-serif;
   --font-family-accent: "Sofia Sans Semi Condensed", sans-serif;
@@ -70,10 +70,10 @@
   font-weight: var(--font-weight-regular);
   text-transform: uppercase;
   color: var(--color-text-dark);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
 }
 
-p {
+p, li {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-light);
   color: var(--color-text-dark);
@@ -82,15 +82,15 @@ p {
 .caption {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-light);
-  color: var(--color-text-light);
+  color: var(--color-text-caption);
 }
 
 .primary-button {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
   color: var(--color-text-accent);
   border: 2px solid transparent;
   text-transform: capitalize;
-  padding: 4px 8px;
+  padding: 1rem 1.5rem;
   cursor: pointer;
   /* transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out; */
 }
