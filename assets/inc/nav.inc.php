@@ -27,7 +27,7 @@
       </div>
 
       <ul class="mobile-nav">
-        <li class="learn"><a href="<?php echo $path; ?>pages/index.php">LEARN</a></li>
+        <li class="learn"><a href="<?php echo $path; ?>index.php">LEARN</a></li>
         <li class="practice"><a href="<?php echo $path; ?>pages/practice.php">PRACTICE</a></li>
         <li class="quiz"><a href="<?php echo $path; ?>pages/quiz.php">QUIZ</a></li>
       </ul>

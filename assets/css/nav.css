@@ -31,6 +31,7 @@ nav {
 .mobile-nav {
   display: block;
   opacity: 0;
+  pointer-events: none;
   position: absolute;
   top: 100%; /* Bottom of nav container because of position: relative  */
   left: 0;
@@ -42,6 +43,7 @@ nav {
 }
 
 .mobile-nav.active {
+  pointer-events: auto;
   animation: slideDown 0.4s forwards;
   animation-timing-function: var(--timing-function-mobile-nav);
   transform-origin: top center;

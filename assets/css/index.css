@@ -40,9 +40,18 @@ main {
   margin-left: 1rem;
 }
 
-header h2 {
+.hero-subtitle {
   font-size: var(--font-size-heading-mobile);
-  color: var(--color-secondary-dark);
+  border-bottom: 2px solid var(--color-outline);
+}
+
+section {
+  text-align: left;
+  margin: clamp(2rem, 8vw, 10rem) 2rem;
+}
+
+.section-title {
+  font-size: var(--font-size-section-title-mobile);
 }
 
 @media screen and (min-width: 900px) {
