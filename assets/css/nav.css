@@ -1,12 +1,15 @@
 nav {
+  position: sticky;
+  top: 0;
   margin: 0;
   padding: 0;
-  position: sticky;
+  z-index: 1000;
 }
 
 .mobile-nav-container {
   position: relative;
   border-bottom: 2px solid var(--color-outline);
+  background-color: var(--color-background);
 }
 
 .menu-icon {
