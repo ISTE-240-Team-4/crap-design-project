@@ -6,6 +6,7 @@ CREATE TABLE pages (
   `title`               VARCHAR(30) NOT NULL,
   `intro_heading`       TEXT NOT NULL,
   `intro_content`       TEXT NOT NULL,
+  `summary`             TEXT,
   `conclusion_heading`  TEXT NOT NULL,
   `conclusion_content`  TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -46,7 +47,7 @@ CREATE TABLE principle_buttons (
 --   FOREIGN KEY (principle_id) REFERENCES principles(id) ON DELETE CASCADE
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `conclusion_heading`, `conclusion_content`)
+INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content`)
   VALUES ('learn', 'this CRAP | Learn Mode', 'INTRODUCTION TO THIS CRAP.',
           "<p>
             Wouldn't it be great if there were a few simple rules that just worked every time you wanted something to look clean, organized, and professional?
@@ -60,8 +61,12 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `conclusio
           <p>
             Here, you'll learn what each principle means, see it in action, and test yourself through short, interactive examples designed to make good design feel obvious.
           </p>",
+          "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
+          <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
+          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          ",
           'ALREADY DONE?',
-          "Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test."
+          "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
          ),
          ('practice', 'this CRAP | Practice Mode', 'PRACTICE WITH THIS CRAP.',
           "<p>
@@ -76,8 +81,12 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `conclusio
           <p>
             Here, you'll learn what each principle means, see it in action, and test yourself through short, interactive examples designed to make good design feel obvious.
           </p>",
+          "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
+          <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
+          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          ",
           'ALREADY DONE?',
-          "Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test."
+          "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
          ),
          ('quiz', 'this CRAP | Quiz Mode','TEST YOUR UNDERSTANDING WITH THIS CRAP.',
           "<p>
@@ -92,8 +101,12 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `conclusio
           <p>
             Here, you'll learn what each principle means, see it in action, and test yourself through short, interactive examples designed to make good design feel obvious.
           </p>",
+          "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
+          <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
+          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          ",
           'ALREADY DONE?',
-          "Good job completing the quiz! How did you do? Feel free to head back over to the <strong>learn</strong> mode and refresh your understanding or the <strong>practice</strong> mode to experiment more with the principles or retake the quiz!"
+          "<p>Good job completing the quiz! How did you do? Feel free to head back over to the <strong>learn</strong> mode and refresh your understanding or the <strong>practice</strong> mode to experiment more with the principles or retake the quiz!</p>"
          );
 
 INSERT INTO images (`file_path`, `caption`)

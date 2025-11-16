@@ -7,16 +7,21 @@
    * @return array|false - page data or false on failure
    */
   function getPageInfo(mysqli $mysqli, string $mode): array|false {
-    $sql = "SELECT `title`, `intro_heading`, `intro_content`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
+    $sql = "SELECT `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
     $stmt = $mysqli -> prepare($sql);
-    $stmt -> bind_param("s", $mode);
+    $searchParam = "%$mode%";
+    $stmt -> bind_param("s", $searchParam);
 
-    if (!$stmt -> execute())
+    if (!$stmt -> execute()) {
+      error_log("getPageInfo execution error: $stmt -> error");
       return false;
+    }
 
     $result = $stmt -> get_result() -> fetch_assoc();
-    if (!$result)
+    if (!$result) {
+      error_log("No page found for mode: $mode");
       return false;
+    }
 
     $stmt -> close();
     return $result;
@@ -24,12 +29,14 @@
 
   /**
    * Retrieve associated information based on principle (Contrast, Repetition, Alignment, Proximity)
+   * 
    * @param mysqli $mysqli - active MySQLi connection object
    * @param string $principle - design principle
    * @return array|false - principle data or false on failure
    */
   function getPrincipleInfo(mysqli $mysqli, string $principle): array|false {
     $sql = "SELECT
+              `name`,
               `interaction_heading`,
               `definition`,
               i_before.`file_path` AS `before_file_path`,
@@ -45,16 +52,56 @@
             WHERE LOWER(principles.`name`) LIKE LOWER(?)
           ";
     $stmt = $mysqli -> prepare($sql);
-    $stmt -> bind_param("s", $principle);
+    $searchParam = "%$principle%";
+    $stmt -> bind_param("s", $searchParam);
     
-    if (!$stmt -> execute())
+    if (!$stmt -> execute()) {
+      error_log("getPrincipleInfo execution error: $stmt -> error");
       return false;
+    }
 
     $result = $stmt -> get_result() -> fetch_assoc();
-    if (!$result)
+    if (!$result) {
+      error_log("No principle data found");
       return false;
+    }
 
     $stmt -> close();
     return $result;
+  }
+
+  /**
+   * Retrieve associated buttons based on principle (Contrast, Repetition, Alignment, Proximity)
+   * 
+   * @param mysqli $mysqli - active MySQLi connection object
+   * @param string $principle - design principle
+   * @return array|false - principle buttons or false on failure
+   */
+  function getPrincipleButtons(mysqli $mysqli, string $principle): array|false {
+    $sql = "SELECT principle_buttons.`name` FROM principle_buttons
+            INNER JOIN principles ON principles.`id` = principle_id
+            WHERE LOWER(principles.`name`) = LOWER(?)
+           ";
+    $stmt = $mysqli -> prepare($sql);
+    $stmt -> bind_param("s", $principle);
+
+    if (!$stmt -> execute()) {
+      error_log("getPrincipleButtons execution error: $stmt -> error");
+      return false;
+    }
+
+    $result = $stmt -> get_result();
+    if (!$result) {
+      error_log("No associated principle buttons found");
+      return false;
+    }
+
+    $buttons = [];
+    while ($row = $result -> fetch_assoc()) {
+      $buttons[] = $row['name'];
+    }
+
+    $stmt -> close();
+    return $buttons;
   }
 ?>
