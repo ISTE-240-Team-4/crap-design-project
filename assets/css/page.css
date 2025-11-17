@@ -6,10 +6,6 @@ main {
   display: none;
 }
 
-/* .intro-section {
-  padding-top: 4rem;
-} */
-
 .intro-section, .principle-section {
   border-bottom: 2px solid var(--color-outline);
 }
@@ -92,6 +88,7 @@ main {
 }
 
 @media screen and (min-width: 850px) {
+  /* Styling for Side Bar Nav */
   .contents-menu {
     position: sticky;
     display: flex;
@@ -122,6 +119,11 @@ main {
     text-decoration: none;
     font-weight: var(--font-weight-regular);
   }
+  
+  .contents-links a:not(.active):hover {
+    color: white;
+    text-shadow: 0 0 5px var(--color-primary-dark), 0 0 10px var(--color-primary-light);
+  }
 
   .contents-links a.active {
     color: var(--color-primary-dark);
@@ -135,5 +137,48 @@ main {
 @media screen and (min-width: 900px) {
   .this {
     top: 4px;
+  }
+
+  .principle-section .section-title {
+    text-align: right;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--color-outline);
+  }
+
+  #introduction {
+    margin: 0 auto;
+  }
+
+
+  .principle-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .principle-interaction {
+    height: fit-content;
+    width: 40vw;
+    min-width: 200px;
+    max-width: 400px;
+    gap: 0;
+  }
+
+  .principle-interaction .heading-2 {
+    text-align: left;
+    line-height: 1.4rem;
+    padding: 1rem 12px;
+  }
+
+  .principle-buttons {
+    flex-direction: column;
+  }
+
+  .principle-buttons button {
+    width: 100%;
+  }
+
+  .principle-content {
+    padding: 1rem 2rem;
+    border-right: 2px solid var(--color-outline);
   }
 }

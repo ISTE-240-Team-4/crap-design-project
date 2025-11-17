@@ -17,26 +17,8 @@
   $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
   <main class="container">
-    <header class="col col-12">
-      <div class="hero-container">
-        <h1 class="hero">
-          <span class="this">this</span>
-          <div class="crap">
-            <span>C</span>
-            <span>R</span>
-            <span>A</span>
-            <span>P</span>
-            <span>.</span>
-          </div>
-        </h1>
-      </div>
-      <h2 class="hero-subtitle">
-        ONE-STOP WAY TO LEARN HOW TO EFFECTIVELY APPLY CRAP DESIGN PRINCIPLES AND MAKE YOUR WEBSITE LOOK JUST RIGHT.
-      </h2>
-    </header>
-
     <div class="row">
-      <aside class="contents-menu col col-12 col-md-3">
+      <aside class="contents-menu col col-12 col-md-3 col-lg-2">
         <h3>Contents Menu</h3>
         <ul class="contents-links">
           <li><a href="#introduction">Introduction</a></li>
@@ -48,7 +30,25 @@
         </ul>
       </aside>
 
-      <div class="col col-12 col-md-9">
+      <div class="col col-12 col-md-9 col-lg-10">
+        <header class="col col-12">
+          <div class="hero-container">
+            <h1 class="hero">
+              <span class="this">this</span>
+              <div class="crap">
+                <span>C</span>
+                <span>R</span>
+                <span>A</span>
+                <span>P</span>
+                <span>.</span>
+              </div>
+            </h1>
+          </div>
+          <h2 class="hero-subtitle">
+            ONE-STOP WAY TO LEARN HOW TO EFFECTIVELY APPLY CRAP DESIGN PRINCIPLES AND MAKE YOUR WEBSITE LOOK JUST RIGHT.
+          </h2>
+        </header>
+
         <!-- Introduction -->
         <?php include($path.'assets/inc/intro.inc.php'); ?>
 

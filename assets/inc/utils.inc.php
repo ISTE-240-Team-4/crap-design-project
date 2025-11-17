@@ -7,7 +7,7 @@
    * @return array|false - page data or false on failure
    */
   function getPageInfo(mysqli $mysqli, string $mode): array|false {
-    $sql = "SELECT `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
+    $sql = "SELECT `mode`, `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
     $stmt = $mysqli -> prepare($sql);
     $searchParam = "%$mode%";
     $stmt -> bind_param("s", $searchParam);

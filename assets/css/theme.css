@@ -22,7 +22,7 @@
   --font-weight-bold: 800;
 
   --font-size-body-mobile: 16px;
-  --font-size-body-desktop: 20px;
+  --font-size-body-desktop: 18px;
 
   --font-size-caption-mobile: 14px;
   --font-size-caption-desktop: 18px;
@@ -33,7 +33,7 @@
   --font-size-section-title-mobile: 24px;
   --font-size-section-title-desktop: 28px;
 
-  --font-size-hero: clamp(72px, 32vw, 350px);
+  --font-size-hero: clamp(72px, 28vw, 350px);
 
   --font-size-sm: 12px;
   --font-size-md: 18px;
@@ -145,9 +145,9 @@ input, button, textarea, select {
   font-size: inherit;
 }
 
-@media screen and (min-width: 55rem) {
+@media screen and (min-width: 60rem) {
   body {
     font-weight: var(--font-weight-regular);
-    /* font-size: var(--font-size-body-desktop); */
+    font-size: var(--font-size-body-desktop);
   }
 }
