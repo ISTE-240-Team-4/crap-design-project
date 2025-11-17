@@ -44,7 +44,6 @@
           <li><a href="#repetition">Repetition</a></li>
           <li><a href="#alignment">Alignment</a></li>
           <li><a href="#proximity">Proximity</a></li>
-          <!-- <li><a href="#summary">Summary</a></li> -->
           <li><a href="#conclusion">Conclusion</a></li>
         </ul>
       </aside>

@@ -22,3 +22,33 @@ const mobileNavToggle = () => {
     mobileNav.classList.add('active');
   }
 };
+
+const targets = document.querySelectorAll(
+  '#introduction, #contrast, #repetition, #alignment, #proximity, #conclusion'
+);
+
+const sideNavLinks = document.querySelectorAll('.contents-links a');
+
+const options = {
+  root: null, // browser viewport
+  rootMargin: '-60px 0px 0px -30px',
+  threshold: [0.25, 0.5] // ratios to execute callback
+};
+
+const observerCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    sideNavLinks.forEach((link) => {
+      const targetId = link.getAttribute('href').substring(1); // Remove '#'
+      if (targetId === entry.target.id) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, options);
+targets.forEach((target) => observer.observe(target));

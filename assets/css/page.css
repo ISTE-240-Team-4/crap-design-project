@@ -123,6 +123,10 @@ main {
     font-weight: var(--font-weight-regular);
   }
 
+  .contents-links a.active {
+    color: var(--color-primary-dark);
+  }
+
   .row > div {
     border-left: 2px solid var(--color-outline);
   }
