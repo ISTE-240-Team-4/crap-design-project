@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/page.css">
   <?php echo $pageStyles ?? ''; ?>
   <script src="<?php echo $path; ?>assets/scripts/navigationMenu.js" defer></script>
+  <script src="<?php echo $path; ?>assets/scripts/crap.js" defer></script>
 </head>
 <body>
   <nav>

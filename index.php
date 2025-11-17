@@ -16,6 +16,7 @@
   $alignmentButtons=getPrincipleButtons($mysqli, 'alignment');
   $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
+  <div class="banner"></div>
   <main class="container">
     <div class="row">
       <aside class="contents-menu col col-12 col-md-3 col-lg-2">
