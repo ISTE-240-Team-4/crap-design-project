@@ -1,4 +1,10 @@
-<section class="principle-section">
+<?php
+  if (!$principleInfo || !$principleButtons) {
+    exit();
+  }
+?>
+
+<section id="<?php echo strtolower($principleInfo['name']); ?>" class="principle-section">
   <h2 class="section-title"><?php echo $principleInfo['name']; ?>.</h2>
   <div class="principle-interaction">
     <h3 class="heading-2">
@@ -11,7 +17,7 @@
     </div>
   </div>
 
-  <div class="section-content">
+  <div class="principle-content">
     <div class="definition">
       <h3 class="heading-1">DEFINITION</h3>
       <p>

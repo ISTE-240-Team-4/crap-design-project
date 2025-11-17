@@ -85,3 +85,32 @@ nav {
   background-color: var(--color-primary-light);
   color: var(--color-text-dark);
 }
+
+@media screen and (min-width: 900px) {
+  .mobile-nav-container {
+    display: none;
+    pointer-events: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom: 2px solid var(--color-outline);
+    background-color: var(--color-background);
+  }
+
+  .desktop-nav li {
+    width: 140px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .desktop-nav li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+}

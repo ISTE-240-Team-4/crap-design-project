@@ -63,7 +63,7 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`,
           </p>",
           "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
           <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
-          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          <p>They aren't just <strong>design rules</strong>; they're <strong>thinking tools</strong>. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
           ",
           'ALREADY DONE?',
           "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
@@ -83,7 +83,7 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`,
           </p>",
           "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
           <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
-          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          <p>They aren't just <strong>design rules</strong>; they're <strong>thinking tools</strong>. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
           ",
           'ALREADY DONE?',
           "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
@@ -103,7 +103,7 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`,
           </p>",
           "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
           <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
-          <p>They aren't just design rules; they're thinking tools. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
+          <p>They aren't just <strong>design rules</strong>; they're <strong>thinking tools</strong>. Using them, you will be able to make deliberate visual choices that communicate ideas effectively. Once you learn to apply them, your work doesn't just look competent — it looks confident.</p>
           ",
           'ALREADY DONE?',
           "<p>Good job completing the quiz! How did you do? Feel free to head back over to the <strong>learn</strong> mode and refresh your understanding or the <strong>practice</strong> mode to experiment more with the principles or retake the quiz!</p>"

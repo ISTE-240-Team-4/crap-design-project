@@ -16,10 +16,10 @@
   --font-family-accent: "Sofia Sans Semi Condensed", sans-serif;
 
   --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+  --font-weight-regular: 500;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 800;
 
   --font-size-body-mobile: 16px;
   --font-size-body-desktop: 20px;
@@ -28,7 +28,7 @@
   --font-size-caption-desktop: 18px;
 
   --font-size-heading-mobile: 16px;
-  --font-size-heading-desktop: 20px;
+  --font-size-heading-desktop: 18px;
 
   --font-size-section-title-mobile: 24px;
   --font-size-section-title-desktop: 28px;
@@ -79,6 +79,10 @@ p, li {
   color: var(--color-text-dark);
 }
 
+p > strong {
+  font-weight: var(--font-weight-semibold);
+}
+
 .caption {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-light);
@@ -111,6 +115,8 @@ p, li {
 }
 
 html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
@@ -139,8 +145,9 @@ input, button, textarea, select {
   font-size: inherit;
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 55rem) {
   body {
-    font-size: var(--font-size-body-desktop);
+    font-weight: var(--font-weight-regular);
+    /* font-size: var(--font-size-body-desktop); */
   }
 }

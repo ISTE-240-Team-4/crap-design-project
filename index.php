@@ -35,33 +35,49 @@
       </h2>
     </header>
 
-    <!-- Introduction -->
-    <?php include($path.'assets/inc/intro.inc.php'); ?>
+    <div class="row">
+      <aside class="contents-menu col col-12 col-md-3">
+        <h3>Contents Menu</h3>
+        <ul class="contents-links">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#contrast">Contrast</a></li>
+          <li><a href="#repetition">Repetition</a></li>
+          <li><a href="#alignment">Alignment</a></li>
+          <li><a href="#proximity">Proximity</a></li>
+          <!-- <li><a href="#summary">Summary</a></li> -->
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </aside>
 
-    <!-- Principles -->
-    <?php
-      $principleInfo=$contrastInfo;
-      $principleButtons=$contrastButtons;
-      include($path.'assets/inc/principle.inc.php');
+      <div class="col col-12 col-md-9">
+        <!-- Introduction -->
+        <?php include($path.'assets/inc/intro.inc.php'); ?>
 
-      $principleInfo=$repetitionInfo;
-      $principleButtons=$repetitionButtons;
-      include($path.'assets/inc/principle.inc.php');
+        <!-- Principles -->
+        <?php
+          $principleInfo=$contrastInfo;
+          $principleButtons=$contrastButtons;
+          include($path.'assets/inc/principle.inc.php');
 
-      $principleInfo=$alignmentInfo;
-      $principleButtons=$alignmentButtons;
-      include($path.'assets/inc/principle.inc.php');
+          $principleInfo=$repetitionInfo;
+          $principleButtons=$repetitionButtons;
+          include($path.'assets/inc/principle.inc.php');
 
-      $principleInfo=$proximityInfo;
-      $principleButtons=$proximityButtons;
-      include($path.'assets/inc/principle.inc.php');
-    ?>
+          $principleInfo=$alignmentInfo;
+          $principleButtons=$alignmentButtons;
+          include($path.'assets/inc/principle.inc.php');
 
-    <!-- Summary & Conclusion -->
-    <?php 
-      include($path.'assets/inc/summary.inc.php');
-      include($path.'assets/inc/conclusion.inc.php');
-    ?>
+          $principleInfo=$proximityInfo;
+          $principleButtons=$proximityButtons;
+          include($path.'assets/inc/principle.inc.php');
+        ?>
+
+        <!-- Summary & Conclusion -->
+        <?php 
+          include($path.'assets/inc/conclusion.inc.php');
+        ?>
+      </div>
+    </div>
   </main>
 <?php
   require_once($path.'assets/inc/footer.inc.php');
