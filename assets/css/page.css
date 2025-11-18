@@ -103,6 +103,7 @@ main {
     color: var(--color-text-accent);
     text-transform: uppercase;
     font-weight: var(--font-weight-regular);  
+    font-size: var(--font-size-md);
     margin: 0;
   }
 

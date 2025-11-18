@@ -21,7 +21,7 @@
   <div class="banner"></div>
   <main class="container">
     <div class="row">
-      <aside class="contents-menu col col-12 col-md-3 col-lg-2">
+      <aside class="contents-menu col col-12 col-md-2 col-lg-2">
         <h3>Contents Menu</h3>
         <ul class="contents-links">
           <li><a href="#introduction">Introduction</a></li>
@@ -33,7 +33,7 @@
         </ul>
       </aside>
 
-      <div class="col col-12 col-md-9 col-lg-10">
+      <div class="col col-12 col-md-10 col-lg-10">
         <header class="col col-12">
           <div class="hero-container">
             <h1 class="hero">
