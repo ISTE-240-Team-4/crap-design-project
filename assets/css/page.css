@@ -130,7 +130,7 @@ main {
   
   .contents-links a:not(.active):hover {
     color: white;
-    text-shadow: 0 0 5px var(--color-primary-dark), 0 0 10px var(--color-primary-light);
+    text-shadow: 0 0 5px var(--color-primary-dark), 0 0 15px var(--color-primary-light);
   }
 
   .contents-links a.active {
@@ -147,23 +147,37 @@ main {
     top: 4px;
   }
 
-  .principle-section .section-title {
-    text-align: right;
-    margin: 0 auto;
-    border-bottom: 2px solid var(--color-outline);
-  }
-
   #introduction {
     margin: 0 auto;
   }
 
+  .principle-section {
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .principle-section .section-title {
+    position: sticky;
+    align-self: flex-start;
+    top: 58px;
+    text-align: right;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--color-outline);
+    background-color: white;
+    z-index: 10;
+  }
 
   .principle-container {
     display: flex;
     flex-direction: row-reverse;
+    position: relative; /* Anchor interaction child to this container */
+    align-items: flex-start;
   }
 
   .principle-interaction {
+    position: sticky;
+    align-self: flex-start;
+    top: 130px; /* Keep in line with other sticky elements */
     height: fit-content;
     width: 40vw;
     min-width: 200px;
