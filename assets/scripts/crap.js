@@ -1,6 +1,6 @@
-const learnLink = document.querySelector('.desktop-nav .learn a');
-const practiceLink = document.querySelector('.desktop-nav .practice');
-const quizLink = document.querySelector('.desktop-nav .quiz');
+const learnLink = document.querySelector('.desktop-nav-links .learn a');
+const practiceLink = document.querySelector('.desktop-nav-links .practice');
+const quizLink = document.querySelector('.desktop-nav-links .quiz');
 
 const banner = document.querySelector('.banner');
 const heroContainer = document.querySelector('.hero-container');

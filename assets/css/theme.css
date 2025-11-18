@@ -96,7 +96,7 @@ p > strong {
   text-transform: capitalize;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  /* transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out; */
+  transition: color 0.3s ease-out;
 }
 
 .primary-button:hover {

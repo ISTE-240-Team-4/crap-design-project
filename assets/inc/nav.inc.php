@@ -35,9 +35,11 @@
       </ul>
     </div>
 
-    <ul class="desktop-nav">
-      <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>">LEARN</a></li>
-      <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>">PRACTICE</a></li>
-      <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>">QUIZ</a></li>
-    </ul>
+    <div class="desktop-nav">
+      <ul class="desktop-nav-links">
+        <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>">LEARN</a></li>
+        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>">PRACTICE</a></li>
+        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>">QUIZ</a></li>
+      </ul>
+    </div>
   </nav>
