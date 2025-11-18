@@ -14,6 +14,7 @@
   <?php echo $pageStyles ?? ''; ?>
   <script src="<?php echo $path; ?>assets/scripts/navigationMenu.js" defer></script>
   <script src="<?php echo $path; ?>assets/scripts/crap.js" defer></script>
+  <?php echo $scripts ?? ''; ?>
 </head>
 <body>
   <nav>
@@ -37,9 +38,9 @@
 
     <div class="desktop-nav">
       <ul class="desktop-nav-links">
-        <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>">LEARN</a></li>
-        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>">PRACTICE</a></li>
-        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>">QUIZ</a></li>
+        <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>" onclick="() => delayedReroute()">LEARN</a></li>
+        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>" onclick="() => delayedReroute()">PRACTICE</a></li>
+        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>" onclick="() => delayedReroute()">QUIZ</a></li>
       </ul>
     </div>
   </nav>

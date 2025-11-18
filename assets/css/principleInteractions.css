@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Sriracha&family=Twinkle+Star&display=swap');
+
+#contrast.size-active .heading-1 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-light);
+}
+
+#contrast.size-active p {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+}
+
+#contrast.size-active figcaption {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-light);
+}
+
+#contrast.size-active li {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+#contrast.color-active .principle-content{
+  background-color: #38EBD5;
+}
+
+#contrast.color-active .heading-1 {
+  color: #E6D526;
+}
+
+#contrast.color-active p, #contrast.color-active li {
+  color: #52EB96;
+}
+
+#contrast.color-active figcaption {
+  color: #CCCCCC;
+}
+
+#repetition.typeface-active .principle-content div:first-of-type .heading-1 {
+  font-family: "Playfair", serif;
+}
+
+#repetition.typeface-active .principle-content div:nth-of-type(2) .heading-1 {
+  font-family: "Sriracha", cursive;
+}
+
+#repetition.typeface-active .principle-content div:last-of-type .heading-1 {
+  font-family: "Twinkle Star", cursive;
+}
+
+#repetition.typeface-active p, #repeition.typeface-active li {
+  font-family: "Aladin", system-ui;
+}
+
+#repetition.typeface-active figcaption {
+  font-family: "Playfair", serif;
+}
+
+#repetition.color-active .principle-content div:first-of-type .heading-1 {
+  color: #077a26;
+}
+
+#repetition.color-active .principle-content div:nth-of-type(2) .heading-1 {
+  color: #78782b;
+}
+
+#repetition.color-active .principle-content div:last-of-type .heading-1 {
+  color: #9d3fa6;
+}
+
+#repetition.color-active p {
+  color: #D80024;
+}
+
+#repetition.color-active figure:first-of-type figcaption {
+  color: #D11014;
+}
+
+#repetition.color-active figure:last-of-type figcaption {
+  color: #CCC1E3;
+}
+
+#repetition.color-active li {
+  color: #FD89D7;
+}
+
+#alignment.elements-active .principle-content div:first-of-type .heading-1 {
+  text-align: right;
+}
+
+#alignment.elements-active .principle-content div:nth-of-type(2) .heading-1 {
+  text-align: center;
+}
+
+#alignment.elements-active .principle-content div:last-of-type .heading-1 {
+  margin: 0 0 2rem 2rem;
+  text-align: left;
+}
+
+#alignment.elements-active figure img {
+  margin-left: 4rem;
+}
+
+#alignment.elements-active figure:last-of-type img {
+  margin-top: 4rem;
+}
+
+#alignment.text-active p {
+  text-align: center;
+}
+
+#alignment.text-active figure:first-of-type figcaption {
+  text-align: right;
+}
+
+#alignment.text-active figure:last-of-type figcaption {
+  text-align: left;
+}
+
+#alignment.text-active li {
+  text-align: right;
+}
+
+#proximity.density-active .principle-content div:first-of-type .heading-1 {
+  margin-bottom: 4rem;
+}
+
+#proximity.density-active .principle-content div:nth-of-type(2) .heading-1 {
+  margin-bottom: -2rem;
+}
+
+#proximity.density-active .principle-content div:last-of-type .heading-1 {
+  margin-top: 0;
+  margin-bottom: 6rem;
+}
+
+#proximity.density-active figcaption {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+#proximity.spacing-active .principle-content div:first-of-type .heading-1 {
+  letter-spacing: 1.1rem;
+}
+
+#proximity.spacing-active .principle-content div:nth-of-type(2) .heading-1 {
+  letter-spacing: -0.2rem;
+}
+
+#proximity.spacing-active .principle-content div:last-of-type .heading-1 {
+  letter-spacing: 2.2rem;
+}
+
+#proximity.spacing-active p {
+  letter-spacing: 0.5rem;
+  line-height: 2rem;
+}
+
+#proximity.spacing-active figure:first-of-type figcaption {
+  letter-spacing: 0.4rem;
+}
+
+#proximity.spacing-active figure:last-of-type figcaption {
+  letter-spacing: 0.2rem;
+}
+
+#proximity.spacing-active li {
+  letter-spacing: -0.1rem;
+  line-height: 0.8rem;
+}

@@ -13,7 +13,7 @@
       </h3>
       <div class="principle-buttons">
         <?php foreach ($principleButtons as $buttonName) {
-          echo "<button class=\"primary-button\">$buttonName</button>";
+          echo "<button id=". strtolower($principleInfo['name']) . ucfirst(strtolower($buttonName)) ." class=\"primary-button\">$buttonName</button>";
         } ?>
       </div>
     </div>

@@ -104,7 +104,7 @@ p > strong {
   border-color: var(--color-outline);
 }
 
-.primary-button:active {
+.primary-button.active {
   background-color: var(--color-primary-dark);
   color: var(--color-text-light);
 }
