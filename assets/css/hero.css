@@ -5,7 +5,7 @@
   width: 100%;
   height: 80vh;
   padding-top: 2rem;
-  transition-duration: 0.35s;
+  transition-duration: 0.2s;
 }
 
 .hero {
@@ -20,10 +20,9 @@
   font-family: var(--font-family-primary);
   font-size: clamp(var(--font-size-body-mobile), 8vw, var(--font-size-xl));
   font-weight: var(--font-weight-semibold);
-  transition-duration: 0.35s;
+  transition-duration: 0s;
 }
 
-/* Potential refactor to separate class when making other pages */
 .crap {
   display: flex;
   flex-direction: row;
@@ -46,5 +45,5 @@
   padding: 1rem;
   border-top: 2px solid var(--color-outline);
   border-bottom: 2px solid var(--color-outline);
-  transition-duration: 0.35s;
+  transition-duration: 0.2s;
 }

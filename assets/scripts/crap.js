@@ -3,10 +3,18 @@ const practiceLink = document.querySelector('.desktop-nav-links .practice');
 const quizLink = document.querySelector('.desktop-nav-links .quiz');
 
 const banner = document.querySelector('.banner');
+const scrollingText = document.querySelector('.scrolling-text-container');
+const span1 = scrollingText.children[0];
+const span2 = scrollingText.children[1];
+const span3 = scrollingText.children[2];
 const heroContainer = document.querySelector('.hero-container');
 const heroThis = heroContainer.querySelector('.this');
 const heroCrap = heroContainer.querySelector('.crap');
 const heroSubtitle = document.querySelector('.hero-subtitle');
+
+const principleSectionTitles = document.querySelectorAll('.principle-section .section-title');
+const principleInteractions = document.querySelectorAll('.principle-interaction');
+const contentsMenu = document.querySelector('.contents-menu');
 
 const backgroundColor = '#FAFAFA';
 const learnHighlightColor = '#7E4FE3';
@@ -34,7 +42,7 @@ const modeConfigs = {
     },
     quiz: {
       bannerBg: quizHighlightColor,
-      bannerText: "Think you've got it? Take the quiz and test your eye for design",
+      bannerText: "Think you've mastered all of the CRAP design principles? Try taking the quiz and test your eye for design.",
       bannerColor: textDark,
       heroThisColor: backgroundColor,
       heroCrapColor: textDark,
@@ -79,11 +87,24 @@ const crapReset = () => {
   banner.style.borderBottom = 'none';
   banner.style.backgroundColor = backgroundColor;
   banner.style.color = backgroundColor;
-  banner.textContent = "";
+
+  span1.textContent = "";
+  span2.textContent = "";
+  span3.textContent = "";
 
   heroContainer.style.backgroundColor = backgroundColor;
   heroThis.style.color = textDark;
   heroCrap.style.color = textDark;
+
+  principleSectionTitles.forEach((title) => {
+    title.style.top = '58px';
+  });
+
+  principleInteractions.forEach((interaction) => {
+    interaction.style.top = '130px';
+  });
+
+  contentsMenu.style.top = '70px';
 
   heroSubtitle.style.backgroundColor = backgroundColor;
   heroSubtitle.style.color = textDark;
@@ -104,7 +125,21 @@ const applyStyles = (mode, eventType) => {
   banner.style.borderBottom = '2px solid var(--color-outline)';
   banner.style.backgroundColor = defaultStyles.bannerBg;
   banner.style.color = defaultStyles.bannerColor;
-  banner.textContent = defaultStyles.bannerText;
+
+  span1.textContent = defaultStyles.bannerText;
+  span2.textContent = defaultStyles.bannerText;
+  span3.textContent = defaultStyles.bannerText;
+
+  // Move section titles, interactions, and contents menu down
+  principleSectionTitles.forEach((title) => {
+    title.style.top = '114px';
+  });
+
+  principleInteractions.forEach((interaction) => {
+    interaction.style.top = '186px';
+  });
+
+  contentsMenu.style.top = '90px';
 
   if (eventType === 'hover') {
     heroThis.style.color = defaultStyles.heroThisColor;

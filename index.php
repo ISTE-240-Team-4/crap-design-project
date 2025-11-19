@@ -18,7 +18,13 @@
   $alignmentButtons=getPrincipleButtons($mysqli, 'alignment');
   $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
-  <div class="banner"></div>
+  <div class="banner">
+    <div class="scrolling-text-container">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
   <main class="container">
     <div class="row">
       <aside class="contents-menu col col-12 col-md-2 col-lg-2">
