@@ -167,6 +167,7 @@ main {
 
   .row > div {
     border-left: 2px solid var(--color-outline);
+    border-right: 2px solid var(--color-outline);
   }
 }
 

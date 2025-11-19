@@ -131,7 +131,7 @@ INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_ima
          ),
          (
           'Repetition',
-          'REPETITION CAN BE USED IN VARIOUS PLACES. SEE WHAT HAPPENS WHEN A LACK OF REPETITION IS USED.',
+          'REPETITION CAN BE APPLIED TO KEEP ELEMENTS UNIFORM. SEE WHAT HAPPENS WHEN A LACK OF REPETITION IS USED.',
           'Repetition creates unity. When certain traits and elements — like colors, fonts, or layouts — appear consistently, your design feels cohesive and deliberate. It helps users recognize patterns faster and understand how the content is organized.',
           '3', '4',
           "<li>Repeat fonts, colors, and shapes throughout your design.</li>
