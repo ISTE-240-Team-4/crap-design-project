@@ -122,8 +122,8 @@ INSERT INTO images (`file_path`, `caption`)
 INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_image_id`, `after_image_id`, `application_steps`)
   VALUES (
           'Contrast',
-          'CONTRAST CAN BE ACHIEVED IN MANY DIFFERENT WAYS. TRY OUT SOME OF THEM ON THIS SECTION.',
-          'Alignment brings order to your design. When elements line up visually, they feel connected and intentional, which makes them easier to follow. Even a small misalignment can make a design look off-balance and distract the viewer. Proper alignment is what makes a layout effortless to read.',
+          'CONTRAST CAN BE ACHIEVED IN MANY DIFFERENT WAYS. SEE WHAT HAPPENS WHEN BAD CONTRAST IS USED.',
+          'Contrast is the eye-catcher. It emphasizes differences, whether its color, size, or weight. It creates a visual hierarchy that will help people notice the important information and it will keep the content from looking bland.',
           '1', '2',
           "<li>Use strong color differences between text and background.</li>
           <li>Make key elements (like titles or buttons) larger, bolder, or brighter.</li>
@@ -131,7 +131,7 @@ INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_ima
          ),
          (
           'Repetition',
-          'REPETITION CAN BE USED IN VARIOUS PLACES. TRY IT OUT ON THIS SECTION.',
+          'REPETITION CAN BE USED IN VARIOUS PLACES. SEE WHAT HAPPENS WHEN A LACK OF REPETITION IS USED.',
           'Repetition creates unity. When certain traits and elements — like colors, fonts, or layouts — appear consistently, your design feels cohesive and deliberate. It helps users recognize patterns faster and understand how the content is organized.',
           '3', '4',
           "<li>Repeat fonts, colors, and shapes throughout your design.</li>
@@ -140,7 +140,7 @@ INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_ima
          ),
          (
           'Alignment',
-          'ALIGNMENT CAN BE APPLIED TO VARIOUS ELEMENTS. TRY IT OUT ON THIS SECTION.',
+          'ALIGNMENT CAN BE APPLIED TO VARIOUS ELEMENTS. SEE WHAT HAPPENS WHEN ELEMENTS ARE MISALIGNED.',
           'Alignment brings order to your design. When elements line up visually, they feel connected and intentional, which makes them easier to follow. Even a small misalignment can make a design look off-balance and distract the viewer. Proper alignment is what makes a layout effortless to read.',
           '5', '6',
           "<li>Use grids or guides to align text, images, and buttons.</li>
@@ -149,7 +149,7 @@ INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_ima
          ),
          (
           'Proximity',
-          'PROXIMITY CAN BE APPLIED BETWEEN VARIOUS ELEMENTS. TRY IT OUT ON THIS SECTION AND OBSERVE BELOW.',
+          'PROXIMITY CAN BE APPLIED BETWEEN VARIOUS ELEMENTS. SEE WHAT HAPPENS WHEN ELEMENTS ARE NOT GROUPED TOGETHER.',
           'Proximity is the principle of relationships. Elements that are close together feel connected; elements that are far apart feel unrelated. By controlling proximity, you visually organize content so users can instantly correctly assume what belongs together.',
           '7', '8',
           "<li>Group related elements (like a product name, price, and button) close together.</li>

@@ -76,7 +76,7 @@ main {
   padding: clamp(2rem, 8vw, 10rem) 2rem;
 }
 
-.section-content:not(:last-of-type) {
+.section-content:not(:first-of-type):not(:last-of-type) {
   margin: 3rem auto;
 }
 
@@ -91,8 +91,8 @@ main {
 }
 
 .example-images figure {
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 .example-images figure img {
@@ -108,9 +108,20 @@ main {
   .example-images {
     flex-direction: row;
   }
+
+  .example-images figure {
+    align-items: flex-start; /* Always have images lined up */
+    gap: 1rem;
+    height: clamp(250px, 10vh, 500px);
+  }
 }
 
 @media screen and (min-width: 850px) {
+  .principle-section .section-title {
+    font-size: var(--font-size-section-title-desktop);
+    padding: 2rem 1rem;
+  }
+
   /* Styling for Side Bar Nav */
   .contents-menu {
     position: sticky;
@@ -176,7 +187,7 @@ main {
   .principle-section .section-title {
     position: sticky;
     align-self: flex-start;
-    top: 58px;
+    top: 57px;
     text-align: right;
     margin: 0 auto;
     border-bottom: 2px solid var(--color-outline);
@@ -194,7 +205,7 @@ main {
   .principle-interaction {
     position: sticky;
     align-self: flex-start;
-    top: 130px; /* Keep in line with other sticky elements */
+    top: 162px; /* Keep in line with other sticky elements */
     height: fit-content;
     flex: 0 0 clamp(150px, 20vw, 250px); /* Use a fixed flex-basis so all interaction panels size consistently */
     gap: 0;

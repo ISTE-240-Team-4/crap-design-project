@@ -43,8 +43,8 @@ const sideNavLinks = document.querySelectorAll('.contents-links a');
 
 const options = {
   root: null, // browser viewport
-  rootMargin: '-60px 0px 0px -30px',
-  threshold: [0.25, 0.5] // ratios to execute callback
+  rootMargin: '-60px 0px -30px -30px',
+  threshold: [0.5, 0.75] // ratios to execute callback
 };
 
 const observerCallback = (entries) => {
@@ -60,6 +60,7 @@ const observerCallback = (entries) => {
       }
     });
   });
+
 };
 
 const observer = new IntersectionObserver(observerCallback, options);

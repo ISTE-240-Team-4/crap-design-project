@@ -97,11 +97,11 @@ const crapReset = () => {
   heroCrap.style.color = textDark;
 
   principleSectionTitles.forEach((title) => {
-    title.style.top = '58px';
+    title.style.top = '57px';
   });
 
   principleInteractions.forEach((interaction) => {
-    interaction.style.top = '130px';
+    interaction.style.top = '162px';
   });
 
   contentsMenu.style.top = '70px';
@@ -136,7 +136,7 @@ const applyStyles = (mode, eventType) => {
   });
 
   principleInteractions.forEach((interaction) => {
-    interaction.style.top = '186px';
+    interaction.style.top = '218px';
   });
 
   contentsMenu.style.top = '90px';
