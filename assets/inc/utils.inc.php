@@ -6,7 +6,7 @@
    * @param string $mode - page mode
    * @return array|false - page data or false on failure
    */
-  function getPageInfo(mysqli $mysqli, string $mode): array|false {
+  function getPageInfo(mysqli $mysqli, string $mode) {
     $sql = "SELECT `mode`, `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
     $stmt = $mysqli -> prepare($sql);
     $searchParam = "%$mode%";
@@ -34,7 +34,7 @@
    * @param string $principle - design principle
    * @return array|false - principle data or false on failure
    */
-  function getPrincipleInfo(mysqli $mysqli, string $principle): array|false {
+  function getPrincipleInfo(mysqli $mysqli, string $principle) {
     $sql = "SELECT
               `name`,
               `interaction_heading`,
@@ -77,7 +77,7 @@
    * @param string $principle - design principle
    * @return array|false - principle buttons or false on failure
    */
-  function getPrincipleButtons(mysqli $mysqli, string $principle): array|false {
+  function getPrincipleButtons(mysqli $mysqli, string $principle) {
     $sql = "SELECT principle_buttons.`name` FROM principle_buttons
             INNER JOIN principles ON principles.`id` = principle_id
             WHERE LOWER(principles.`name`) = LOWER(?)
