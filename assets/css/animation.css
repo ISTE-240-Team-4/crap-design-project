@@ -41,3 +41,12 @@
     transform-origin: top center;
   }
 }
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%); /* 100% / 3 elements */
+  }
+}
