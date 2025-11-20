@@ -18,16 +18,18 @@
   $alignmentButtons=getPrincipleButtons($mysqli, 'alignment');
   $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
-  <div class="banner">
+  <div class="banner" aria-hidden="true">
     <div class="scrolling-text-container">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
-  <main class="container">
+
+  <!-- id used with skip-link -->
+  <main id="main-content" class="container">
     <div class="row">
-      <aside class="contents-menu col col-12 col-md-2 col-lg-2">
+      <aside class="contents-menu col col-12 col-md-2 col-lg-2" role="navigation" aria-label="Page Sections Navigation">
         <h3>Contents Menu</h3>
         <ul class="contents-links">
           <li><a href="#introduction">Introduction</a></li>

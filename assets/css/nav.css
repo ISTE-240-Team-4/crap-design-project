@@ -1,8 +1,19 @@
-/* Heights used by sticky elements to avoid overlap with nav + banner */
-:root {
-  --nav-height: 60px; /* fallback for nav height */
-  --banner-height: 64px; /* fallback for banner total height (including padding) */
-  --top-offset: calc(var(--nav-height) + var(--banner-height));
+/* Hide link from view and general users until focused in on */
+.skip-link {
+  position: absolute;
+  opacity: 0;
+  top: -80px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  padding: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  opacity: 100;
+  top: 0;
 }
 
 nav {

@@ -87,6 +87,7 @@ const crapReset = () => {
   banner.style.borderBottom = 'none';
   banner.style.backgroundColor = backgroundColor;
   banner.style.color = backgroundColor;
+  banner.ariaHidden = 'true';
 
   span1.textContent = "";
   span2.textContent = "";
@@ -125,6 +126,7 @@ const applyStyles = (mode, eventType) => {
   banner.style.borderBottom = '2px solid var(--color-outline)';
   banner.style.backgroundColor = defaultStyles.bannerBg;
   banner.style.color = defaultStyles.bannerColor;
+  banner.ariaHidden = 'false';
 
   span1.textContent = defaultStyles.bannerText;
   span2.textContent = defaultStyles.bannerText;

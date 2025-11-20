@@ -4,8 +4,8 @@
   }
 ?>
 
-<section id="<?php echo strtolower($principleInfo['name']); ?>" class="principle-section">
-  <h2 class="section-title"><?php echo $principleInfo['name']; ?>.</h2>
+<section id="<?php echo strtolower($principleInfo['name']); ?>" class="principle-section" aria-labelledby="<?php echo strtolower($principleInfo['name']); ?>-title">
+  <h2 id="<?php echo strtolower($principleInfo['name']); ?>-title" class="section-title"><?php echo $principleInfo['name']; ?>.</h2>
   <div class="principle-container">
     <div class="principle-interaction">
       <h3 class="heading-2">
@@ -13,7 +13,7 @@
       </h3>
       <div class="principle-buttons">
         <?php foreach ($principleButtons as $buttonName) {
-          echo "<button id=". strtolower($principleInfo['name']) . ucfirst(strtolower($buttonName)) ." class=\"primary-button\">$buttonName</button>";
+          echo "<button type=\"button\" id=". strtolower($principleInfo['name']) . ucfirst(strtolower($buttonName)) ." class=\"primary-button\">$buttonName</button>";
         } ?>
       </div>
     </div>
