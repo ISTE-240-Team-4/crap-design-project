@@ -98,7 +98,7 @@
 }
 
 #alignment.elements-active figure img {
-  margin-left: 4rem;
+  margin-left: 1.8rem;
 }
 
 #alignment.elements-active figure:last-of-type img {
@@ -126,7 +126,7 @@
 }
 
 #proximity.density-active .principle-content div:nth-of-type(2) .heading-1 {
-  margin-bottom: -2rem;
+  margin-bottom: -1rem;
 }
 
 #proximity.density-active .principle-content div:last-of-type .heading-1 {
@@ -140,7 +140,7 @@
 }
 
 #proximity.spacing-active .principle-content div:first-of-type .heading-1 {
-  letter-spacing: 1.1rem;
+  letter-spacing: 0.8rem;
 }
 
 #proximity.spacing-active .principle-content div:nth-of-type(2) .heading-1 {
@@ -148,7 +148,7 @@
 }
 
 #proximity.spacing-active .principle-content div:last-of-type .heading-1 {
-  letter-spacing: 2.2rem;
+  letter-spacing: 1.2rem;
 }
 
 #proximity.spacing-active p {
@@ -167,4 +167,31 @@
 #proximity.spacing-active li {
   letter-spacing: -0.1rem;
   line-height: 0.8rem;
+}
+
+@media screen and (min-width: 500px) {
+  #proximity.spacing-active .principle-content div:first-of-type .heading-1 {
+    letter-spacing: 1.1rem;
+  }
+
+  #proximity.spacing-active .principle-content div:last-of-type .heading-1 {
+    letter-spacing: 2.2rem;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  #proximity.spacing-active .principle-content div:last-of-type .heading-1 {
+    margin-top: 10rem;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  #alignment.elements-active figure img {
+    margin-left: 4rem;
+  }
+
+  #proximity.density-active .principle-content div:nth-of-type(2) .heading-1 {
+    margin-bottom: -2rem;
+  }
 }

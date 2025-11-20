@@ -104,6 +104,13 @@ main {
   margin-top: 6rem;
 }
 
+@media screen and (min-width: 550px) {
+  .example-images figure img {
+    width: 80%;
+    overflow: hidden;
+  }
+}
+
 @media screen and (min-width: 770px) {
   .example-images {
     flex-direction: row;
@@ -113,6 +120,10 @@ main {
     align-items: flex-start; /* Always have images lined up */
     gap: 1rem;
     height: clamp(250px, 10vh, 500px);
+  }
+
+  .example-images figure img {
+    width: 100%;
   }
 }
 

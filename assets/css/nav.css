@@ -112,7 +112,7 @@ nav {
   color: var(--color-text-dark);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
   .mobile-nav-container {
     display: none;
     pointer-events: none;
