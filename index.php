@@ -18,17 +18,12 @@
   $alignmentButtons=getPrincipleButtons($mysqli, 'alignment');
   $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
-  <div class="banner" aria-hidden="true">
-    <div class="scrolling-text-container">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+  <?php include_once($path.'assets/inc/banner.inc.php'); ?>
 
   <!-- id used with skip-link -->
   <main id="main-content" class="container">
     <div class="row">
+      <!-- Side Bar Navigation -->
       <aside class="contents-menu col col-12 col-md-2 col-lg-2" role="navigation" aria-label="Page Sections Navigation">
         <h3>Contents Menu</h3>
         <ul class="contents-links">
@@ -42,26 +37,11 @@
       </aside>
 
       <div class="col col-12 col-md-10 col-lg-10">
-        <header class="col col-12">
-          <div class="hero-container">
-            <h1 class="hero">
-              <span class="this">this</span>
-              <div class="crap">
-                <span>C</span>
-                <span>R</span>
-                <span>A</span>
-                <span>P</span>
-                <span>.</span>
-              </div>
-            </h1>
-          </div>
-          <h2 class="hero-subtitle">
-            ONE-STOP WAY TO LEARN HOW TO EFFECTIVELY APPLY CRAP DESIGN PRINCIPLES AND MAKE YOUR WEBSITE LOOK JUST RIGHT.
-          </h2>
-        </header>
+        <!-- Hero -->
+        <?php include_once($path.'assets/inc/hero.inc.php'); ?>
 
         <!-- Introduction -->
-        <?php include($path.'assets/inc/intro.inc.php'); ?>
+        <?php include_once($path.'assets/inc/intro.inc.php'); ?>
 
         <!-- Principles -->
         <?php
@@ -84,11 +64,11 @@
 
         <!-- Summary & Conclusion -->
         <?php 
-          include($path.'assets/inc/conclusion.inc.php');
+          include_once($path.'assets/inc/conclusion.inc.php');
         ?>
       </div>
     </div>
   </main>
 <?php
-  require_once($path.'assets/inc/footer.inc.php');
+  include_once($path.'assets/inc/footer.inc.php');
 ?>

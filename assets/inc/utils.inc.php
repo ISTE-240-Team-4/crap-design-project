@@ -7,7 +7,22 @@
    * @return array|false - page data or false on failure
    */
   function getPageInfo(mysqli $mysqli, string $mode) {
-    $sql = "SELECT `mode`, `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content` FROM pages WHERE LOWER(`mode`) LIKE LOWER(?)";
+    $sql = "SELECT
+              `mode`,
+              pages.`title`,
+              hero.`this` AS `hero_this`,
+              hero.`title` AS `hero_title`,
+              hero.`subtitle` AS `hero_subtitle`,
+              `intro_heading`,
+              `intro_content`,
+              `summary`,
+              `conclusion_heading`,
+              `conclusion_content`
+            FROM pages 
+            
+            INNER JOIN heros AS hero ON hero.`id` = `hero_id`
+
+            WHERE LOWER(`mode`) LIKE LOWER(?)";
     $stmt = $mysqli -> prepare($sql);
     $searchParam = "%$mode%";
     $stmt -> bind_param("s", $searchParam);

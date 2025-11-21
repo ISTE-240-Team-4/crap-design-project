@@ -1,14 +1,24 @@
-DROP TABLE IF EXISTS principle_buttons, application_steps, principles, images, pages;
+DROP TABLE IF EXISTS pages, heros, principle_buttons, principles, images;
+
+CREATE TABLE heros (
+  `id`        INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `this`      BOOLEAN NOT NULL, -- if the hero should contain 'this'
+  `title`     VARCHAR(5) NOT NULL,
+  `subtitle`  TINYTEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE pages (
   `id`                  INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `mode`                VARCHAR(30) NOT NULL,
   `title`               VARCHAR(30) NOT NULL,
+  `hero_id`             INT UNSIGNED NOT NULL,
   `intro_heading`       TEXT NOT NULL,
   `intro_content`       TEXT NOT NULL,
   `summary`             TEXT,
   `conclusion_heading`  TEXT NOT NULL,
-  `conclusion_content`  TEXT NOT NULL
+  `conclusion_content`  TEXT NOT NULL,
+
+  FOREIGN KEY (hero_id) REFERENCES heros(id) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE images (
@@ -38,6 +48,27 @@ CREATE TABLE principle_buttons (
   FOREIGN KEY (principle_id) REFERENCES principles(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- CREATE TABLE questions (
+--   `id`          INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   `question`
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- CREATE TABLE question_images (
+--   `question_id`   INT UNSIGNED NOT NULL,
+--   `image_id`      INT UNSIGNED NOT NULL,
+  
+--   PRIMARY KEY (question_id, image_id),
+--   FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE,
+--   FOREIGN KEY (image_id) REFERENCES images(id) ON DELETE RESTRICT,
+-- );
+
+-- CREATE TABLE answers (
+--   `id`            INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   `question_id`   INT UNSIGNED NOT NULL,
+--   `option`        VARCHAR(255) NOT NULL,
+--   `isCorrect`     BOOLEAN NOT NULL,
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- CREATE TABLE application_steps (
 --   `id`            INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --   `principle_id`  INT UNSIGNED NOT NULL,
@@ -47,8 +78,12 @@ CREATE TABLE principle_buttons (
 --   FOREIGN KEY (principle_id) REFERENCES principles(id) ON DELETE CASCADE
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content`)
-  VALUES ('learn', 'this CRAP | Learn Mode', 'INTRODUCTION TO THIS CRAP.',
+INSERT INTO heros (`this`, `title`, `subtitle`)
+  VALUES (TRUE, 'CRAP.', 'ONE-STOP WAY TO LEARN HOW TO EFFECTIVELY APPLY CRAP DESIGN PRINCIPLES AND MAKE YOUR WEBSITE LOOK JUST RIGHT.'),
+         (FALSE, 'QUIZ.', 'ONE-STOP WAY TO LEARN HOW TO EFFECTIVELY APPLY CRAP DESIGN PRINCIPLES AND MAKE YOUR WEBSITE LOOK JUST RIGHT.');
+
+INSERT INTO pages (`mode`, `title`, `hero_id`, `intro_heading`, `intro_content`, `summary`, `conclusion_heading`, `conclusion_content`)
+  VALUES ('learn', 'this CRAP | Learn Mode', '1', 'INTRODUCTION TO THIS CRAP.',
           "<p>
             Wouldn't it be great if there were a few simple rules that just worked every time you wanted something to look clean, organized, and professional?
           </p>
@@ -68,7 +103,7 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`,
           'ALREADY DONE?',
           "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
          ),
-         ('practice', 'this CRAP | Practice Mode', 'PRACTICE WITH THIS CRAP.',
+         ('practice', 'this CRAP | Practice Mode', '1', 'PRACTICE WITH THIS CRAP.',
           "<p>
             Wouldn't it be great if there were a few simple rules that just worked every time you wanted something to look clean, organized, and professional?
           </p>
@@ -88,18 +123,9 @@ INSERT INTO pages (`mode`, `title`, `intro_heading`, `intro_content`, `summary`,
           'ALREADY DONE?',
           "<p>Good job going through all the principles! Think you're ready to apply them like a pro? Head over to the <strong>quiz</strong> mode and put your eye for design to the test.</p>"
          ),
-         ('quiz', 'this CRAP | Quiz Mode','TEST YOUR UNDERSTANDING WITH THIS CRAP.',
+         ('quiz', 'this CRAP | Quiz Mode', '2', 'TEST YOUR UNDERSTANDING WITH THIS CRAP.',
           "<p>
-            Wouldn't it be great if there were a few simple rules that just worked every time you wanted something to look clean, organized, and professional?
-          </p>
-          <p>
-            Great design is NOT about mastering complicated software; it's about using simple, consistent rules that make your work clear and credible. And that's what this CRAP — a quick, hands-on guide to the four essential design principles: Contrast, Repetition, Alignment, and Proximity.
-          </p>
-          <p>
-            Whether you're a small business owner improving your website, a student building your first project, or a beginner designer refining your eye, these principles help you communicate ideas with impact. If the content looks more professional, it instantly becomes more influential.
-          </p>
-          <p>
-            Here, you'll learn what each principle means, see it in action, and test yourself through short, interactive examples designed to make good design feel obvious.
+            You've read, you've practiced — now let's see what stuck. This quick quiz will test how well you can spot and apply the CRAP principles in real examples.Don't overthink it — trust your eye, go with your gut, and have fun seeing how much your design sense has sharpened.
           </p>",
           "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
           <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>
