@@ -119,4 +119,79 @@
     $stmt -> close();
     return $buttons;
   }
+
+  /**
+   * Retrieve all quiz questions and associated answers and images (if any)
+   * 
+   * @param mysqli $mysqli - active MySQLi connection object
+   * @return array|false - question information or false on failure
+   */
+  function getQuestions(mysqli $mysqli) {
+    $sql = "SELECT
+              questions.`id`,
+              `question`,
+              `correct_feedback`,
+              `incorrect_feedback`,
+              answers_agg.`answers_json`,
+
+              -- Handle NULL images_json values by returning []
+              COALESCE(images_agg.images_json, '[]') AS images_json
+            FROM questions
+
+            INNER JOIN (
+              SELECT 
+                a.`question_id`,
+
+                -- Group multiple answer objects into single JSON array string
+                CONCAT('[', GROUP_CONCAT(JSON_OBJECT(
+                  'option', a.`option`,
+                  'is_correct', a.`is_correct`
+                )), ']') AS answers_json
+              FROM answers AS a
+
+              GROUP BY a.`question_id`
+              ORDER BY a.`question_id`
+            ) AS answers_agg ON questions.`id` = answers_agg.`question_id`
+
+            -- Include both rows with and without images
+            LEFT JOIN  (
+              SELECT
+                qi.`question_id`,
+
+                -- Group multiple images objects into single JSON array string
+                CONCAT('[', GROUP_CONCAT(JSON_OBJECT(
+                  'file_path', i.`file_path`,
+                  'caption', i.`caption`
+                )), ']') AS images_json
+              FROM question_images AS qi
+
+              INNER JOIN images AS i ON qi.`image_id` = i.`id`
+
+              GROUP BY qi.`question_id`
+              ORDER BY qi.`question_id`
+            ) AS images_agg ON questions.`id` = images_agg.`question_id`
+
+            ORDER BY questions.`id`;
+           ";
+    $stmt = $mysqli -> prepare($sql);
+
+    if (!$stmt -> execute()) {
+      error_log("getQuestions execution error: $stmt -> error");
+      return false;
+    }
+
+    $result = $stmt -> get_result();
+    if (!$result) {
+      error_log("No question information found");
+      return false;
+    }
+
+    $questions = [];
+    while ($row = $result -> fetch_assoc()) {
+      $questions[] = $row;
+    }
+
+    $stmt -> close();
+    return $questions;
+  }
 ?>

@@ -1,0 +1,38 @@
+.question-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-images figure {
+  width: 100%;
+  text-align: center;
+}
+
+.question-images figure img {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 550px) {
+  .question-images figure img {
+    width: 80%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .question-images {
+    flex-direction: row;
+  }
+
+  .question-images figure {
+    align-items: flex-start; /* Always have images lined up */
+    gap: 1rem;
+    height: clamp(250px, 10vh, 500px);
+  }
+
+  .question-images figure img {
+    width: 100%;
+  }
+}

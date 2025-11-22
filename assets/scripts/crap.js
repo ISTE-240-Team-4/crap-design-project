@@ -10,7 +10,6 @@ const span3 = scrollingText.children[2];
 const heroContainer = document.querySelector('.hero-container');
 const heroThis = heroContainer.querySelector('.this');
 const heroCrap = heroContainer.querySelector('.crap');
-console.log(heroCrap);
 const heroSubtitle = document.querySelector('.hero-subtitle');
 
 const principleSectionTitles = document.querySelectorAll('.principle-section .section-title');

@@ -1,10 +1,13 @@
 <?php
   $path='../';
+  $pageStyles="<link rel=\"stylesheet\" href=\"{$path}assets/css/question.css\">";
   require_once($path.'database/connection.db.php');
   require_once($path.'assets/inc/utils.inc.php');
 
   $pageInfo=getPageInfo($mysqli, 'quiz');
   require_once($path.'assets/inc/nav.inc.php');
+
+  $questions=getQuestions($mysqli);
 ?>
   <?php include_once($path.'assets/inc/banner.inc.php'); ?>
 
@@ -26,6 +29,15 @@
 
         <!-- Introduction -->
         <?php include($path.'assets/inc/intro.inc.php'); ?>
+
+        <!-- Quiz -->
+        <form id="quiz" action="<?php echo $path; ?>assets/scripts/submitQuiz.php" method="post">
+          <?php 
+            foreach ($questions as $question) {
+              include($path.'assets/inc/question.inc.php');
+            }
+          ?>
+        </form>
 
         <!-- Summary & Conclusion -->
         <?php include($path.'assets/inc/conclusion.inc.php'); ?>
