@@ -1,0 +1,143 @@
+.principle-section {
+  border-bottom: 2px solid var(--color-outline);
+}
+
+.principle-section:last-of-type {
+  border: none;
+}
+
+.principle-section .section-title {
+  text-align: right;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--color-outline);
+}
+
+.principle-interaction {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.principle-interaction .heading-2 {
+  text-align: center;
+  font-size: var(--font-size-heading-mobile);
+  margin: auto 4px;
+}
+
+.principle-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.principle-buttons button {
+  font-weight: var(--font-weight-semibold);
+  width: 50%;
+  border: 2px solid var(--color-outline);
+}
+
+.principle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: clamp(2rem, 8vw, 10rem) 2rem;
+}
+
+.example-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-images figure {
+  width: 100%;
+  text-align: center;
+}
+
+.example-images figure img {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 550px) {
+  .example-images figure img {
+    width: 80%;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .example-images {
+    flex-direction: row;
+  }
+
+  .example-images figure {
+    align-items: flex-start; /* Always have images lined up */
+    gap: 1rem;
+    height: clamp(250px, 10vh, 500px);
+  }
+
+  .example-images figure img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .principle-section .section-title {
+    font-size: var(--font-size-section-title-desktop);
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .principle-section {
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .principle-section .section-title {
+    position: sticky;
+    align-self: flex-start;
+    top: 57px;
+    text-align: right;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--color-outline);
+    background-color: white;
+    z-index: 10;
+  }
+
+  .principle-container {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative; /* Anchor interaction child to this container */
+    align-items: flex-start;
+  }
+
+  .principle-interaction {
+    position: sticky;
+    align-self: flex-start;
+    top: 162px; /* Keep in line with other sticky elements */
+    height: fit-content;
+    flex: 0 0 clamp(150px, 20vw, 250px); /* Use a fixed flex-basis so all interaction panels size consistently */
+    gap: 0;
+  }
+
+  .principle-interaction .heading-2 {
+    text-align: left;
+    line-height: 1.4rem;
+    padding: 1rem 12px;
+  }
+
+  .principle-buttons {
+    flex-direction: column;
+  }
+
+  .principle-buttons button {
+    width: 100%;
+  }
+
+  .principle-content {
+    padding: 1rem 2rem;
+    flex: 1 1 0; /* Ensure content grows to fill remaining space beside the interaction panel */
+    border-right: 2px solid var(--color-outline);
+  }
+}

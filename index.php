@@ -1,6 +1,9 @@
 <?php
   $path='./';
-  $pageStyles="<link rel=\"stylesheet\" href=\"{$path}assets/css/principleInteractions.css\">";
+  $pageStyles="
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/principle.css\">
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/principleInteractions.css\">
+  ";
   $scripts="<script src=\"{$path}assets/scripts/principleInteractions.js\" defer></script>";
   require_once($path.'database/connection.db.php');
   require_once($path.'assets/inc/utils.inc.php');
