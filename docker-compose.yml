@@ -1,0 +1,42 @@
+services:
+  web-server:
+    build: .
+    container_name: lamp_web_server
+    ports:
+      - "8080:80"
+    depends_on:
+      - database
+    env_file:
+      - ./.env
+    volumes:
+      - .:/var/www/html
+
+  database:
+    image: mysql:lts # v8.4.7
+    container_name: lamp_database
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: /run/secrets/root_password # Must be set
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    env_file:
+      - ./.env
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d # Runs found SQL files on initial startup
+
+  adminer:
+    image: adminer
+    container_name: lamp_adminer
+    restart: always
+    environment:
+      # Pre-fills server field on Adminer login page
+      ADMINER_DEFAULT_SERVER: database
+    ports:
+      - "8081:8080"
+    depends_on:
+      - database
+
+secrets:
+  root_password:
+    file: ./database/root_password.txt
