@@ -73,7 +73,7 @@
   letter-spacing: 0.02em;
 }
 
-p, li {
+p, li, label {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-light);
   color: var(--color-text-dark);

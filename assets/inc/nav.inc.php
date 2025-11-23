@@ -14,6 +14,7 @@
   <?php echo $pageStyles ?? ''; ?>
   <script src="<?php echo $path; ?>assets/scripts/navigationMenu.js" defer></script>
   <script src="<?php echo $path; ?>assets/scripts/crap.js" defer></script>
+  <script src="<?php echo $path; ?>assets/scripts/sidebarNav.js" defer></script>
   <?php echo $scripts ?? ''; ?>
 </head>
 <body>

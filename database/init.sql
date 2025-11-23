@@ -132,7 +132,7 @@ INSERT INTO pages (`mode`, `title`, `hero_id`, `intro_heading`, `intro_content`,
          (
           "quiz", "this CRAP | Quiz Mode", "2", "TEST YOUR UNDERSTANDING WITH THIS CRAP.",
           "<p>
-            You've read, you've practiced — now let's see what stuck. This quick quiz will test how well you can spot and apply the CRAP principles in real examples.Don't overthink it — trust your eye, go with your gut, and have fun seeing how much your design sense has sharpened.
+            You've read, you've practiced — now let's see what stuck. This quick quiz will test how well you can spot and apply the CRAP principles in real examples. Don't overthink it — trust your eye, go with your gut, and have fun seeing how much your design sense has sharpened.
           </p>",
           "<p>Design doesn't have to be complicated or intimidating. Once you understand the basics behind this CRAP, you start seeing design differently — you can actually tell what is off, not just what feels off.</p>
           <p>These four principles give structure to creativity. Once you begin applying them, you'll realize how often they appear everywhere, from websites and presentations to posters and social media posts.</p>

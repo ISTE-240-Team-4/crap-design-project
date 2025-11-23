@@ -37,6 +37,7 @@
               include($path.'assets/inc/question.inc.php');
             }
           ?>
+          <button type="submit">Submit</button>
         </form>
 
         <!-- Summary & Conclusion -->
