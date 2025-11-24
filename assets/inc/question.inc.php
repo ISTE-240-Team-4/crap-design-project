@@ -27,7 +27,7 @@
         foreach ($optionsArray as $option) {
           echo "
           <div>
-            <input type=\"radio\" id=\"question{$question['id']}{$option['option']}\" name=\"question{$question['id']}\" value=\"{$option['is_correct']}\">
+            <input type=\"radio\" id=\"question{$question['id']}{$option['option']}\" name=\"question{$question['id']}\" value=\"{$option['is_correct']}\" required>
             <label for=\"question{$question['id']}{$option['option']}\">{$option['option']}</label>
           </div>
           ";

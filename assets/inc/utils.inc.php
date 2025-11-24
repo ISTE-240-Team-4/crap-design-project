@@ -32,14 +32,17 @@
       return false;
     }
 
-    $result = $stmt -> get_result() -> fetch_assoc();
+    $result = $stmt -> get_result();
     if (!$result) {
       error_log("No page found for mode: $mode");
       return false;
     }
 
+    $info = $result -> fetch_assoc();
+
+    $result -> free_result();
     $stmt -> close();
-    return $result;
+    return $info;
   } 
 
   /**
@@ -75,14 +78,17 @@
       return false;
     }
 
-    $result = $stmt -> get_result() -> fetch_assoc();
+    $result = $stmt -> get_result();
     if (!$result) {
       error_log("No principle data found");
       return false;
     }
 
+    $info = $result -> fetch_assoc();
+
+    $result -> free_result();
     $stmt -> close();
-    return $result;
+    return $info;
   }
 
   /**
@@ -116,6 +122,7 @@
       $buttons[] = $row['name'];
     }
 
+    $result -> free_result();
     $stmt -> close();
     return $buttons;
   }
@@ -130,8 +137,6 @@
     $sql = "SELECT
               questions.`id`,
               `question`,
-              `correct_feedback`,
-              `incorrect_feedback`,
               answers_agg.`answers_json`,
 
               -- Handle NULL images_json values by returning []
@@ -191,7 +196,47 @@
       $questions[] = $row;
     }
 
+    $result -> free_result();
     $stmt -> close();
     return $questions;
+  }
+
+  /**
+   * Retrieve all quiz question feedback
+   * 
+   * @param mysqli $mysqli - active MySQLi connection object
+   * @return array|false - question feedback or false on failure
+   */
+  function getQuestionsFeedback(mysqli $mysqli) {
+    $sql = "SELECT
+              JSON_OBJECT(
+                'correct', `correct_feedback`,
+                'incorrect', `incorrect_feedback`
+              ) as feedback
+            FROM questions
+
+            ORDER BY `id`
+           ";
+    $stmt = $mysqli -> prepare($sql);
+
+    if (!$stmt -> execute()) {
+      error_log("getQuestionsFeedback execution error: $stmt -> error");
+      return false;
+    }
+
+    $result = $stmt -> get_result();
+    if (!$result) {
+      error_log('No feedback information found');
+      return false;
+    }
+
+    $feedback = [];
+    while ($row = $result -> fetch_assoc()) {
+      $feedback[] = $row;
+    }
+
+    $result -> free_result();
+    $stmt -> close();
+    return $feedback;
   }
 ?>
