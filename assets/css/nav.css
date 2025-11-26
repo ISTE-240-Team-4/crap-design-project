@@ -1,17 +1,40 @@
+/* Hide link from view and general users until focused in on */
+.skip-link {
+  position: absolute;
+  opacity: 0;
+  top: -80px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  padding: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  opacity: 100;
+  top: 0;
+}
+
 nav {
+  position: sticky;
+  top: 0;
   margin: 0;
   padding: 0;
-  position: sticky;
+  z-index: 1000;
 }
 
 .mobile-nav-container {
   position: relative;
   border-bottom: 2px solid var(--color-outline);
+  background-color: var(--color-background);
 }
 
 .menu-icon {
   display: block;
   width: fit-content;
+  background-color: var(--color-background);
+  border: none;
   padding: 1.5rem 1.5rem 1rem 1.5rem;
 }
 
@@ -21,6 +44,12 @@ nav {
 }
 
 .desktop-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.desktop-nav-links {
   display: none;
   list-style-type: none;
   padding: 0;
@@ -31,6 +60,7 @@ nav {
 .mobile-nav {
   display: block;
   opacity: 0;
+  pointer-events: none;
   position: absolute;
   top: 100%; /* Bottom of nav container because of position: relative  */
   left: 0;
@@ -42,6 +72,7 @@ nav {
 }
 
 .mobile-nav.active {
+  pointer-events: auto;
   animation: slideDown 0.4s forwards;
   animation-timing-function: var(--timing-function-mobile-nav);
   transform-origin: top center;
@@ -79,4 +110,33 @@ nav {
 .quiz a {
   background-color: var(--color-primary-light);
   color: var(--color-text-dark);
+}
+
+@media screen and (min-width: 750px) {
+  .mobile-nav-container {
+    display: none;
+    pointer-events: none;
+  }
+
+  .desktop-nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom: 2px solid var(--color-outline);
+    background-color: var(--color-background);
+  }
+
+  .desktop-nav-links li {
+    width: 140px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .desktop-nav-links li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+  }
 }

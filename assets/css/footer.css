@@ -12,3 +12,15 @@ footer p {
   color: var(--color-text-accent);
   font-size: var(--font-size-caption-mobile);
 }
+
+@media screen and (min-width: 770px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  footer p {
+    font-size: var(--font-size-caption-desktop);
+  }
+}
