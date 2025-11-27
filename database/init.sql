@@ -208,33 +208,33 @@ INSERT INTO principle_buttons (`principle_id`, `name`)
 INSERT INTO questions (`question`, `correct_feedback`, `incorrect_feedback`)
   VALUES (
           "When you want people to notice the most important part of your design first, which principle helps you do that?",
-          "Exactly. Contrast grabs attention and creates hierarchy.",
-          "Not quite. Contrast is what helps you make key elements stand out."
+          "&#x2705; Exactly. Contrast grabs attention and creates hierarchy.",
+          "&#x274C; Not quite. Contrast is what helps you make key elements stand out."
          ),
          (
           "What does repetition actually do for your design?",
-          "Right! Repetition ties everything together and builds unity.",
-          "Close! Repetition is what keeps your layout consistent and recognizable."
+          "&#x2705; Right! Repetition ties everything together and builds unity.",
+          "&#x274C; Close! Repetition is what keeps your layout consistent and recognizable."
          ),
          (
           "You're lining up images, text, and buttons along the same invisible grid. Which principle are you applying?",
-          "Yes! Alignment makes your layout feel ordered and intentional.",
-          "Not this time! Alignment is what connects elements visually and keeps things neat."
+          "&#x2705; Yes! Alignment makes your layout feel ordered and intentional.",
+          "&#x274C; Not this time! Alignment is what connects elements visually and keeps things neat."
          ),
          (
           "You notice a heading sitting far away from its paragraph, and the page feels confusing. What principle is missing here?",
-          "That's it! Proximity helps show what belongs together.",
-          "Not quite. Proximity is all about grouping related items."
+          "&#x2705; That's it! Proximity helps show what belongs together.",
+          "&#x274C; Not quite. Proximity is all about grouping related items."
          ),
          (
           "Both contrast and proximity can guide a viewer's attention. What makes them different?",
-          "Exactly right. Contrast draws the eye through difference, proximity organizes through distance.",
-          "They're related, but not the same. Contrast relies on difference, proximity relies on closeness."
+          "&#x2705; Exactly right. Contrast draws the eye through difference, proximity organizes through distance.",
+          "&#x274C; They're related, but not the same. Contrast relies on difference, proximity relies on closeness."
          ),
          (
           "Which design uses contrast to emphasize hierarchy, not just decoration?",
-          "Yes! The strong difference in color and size creates a clear focal point.",
-          "The lighter text blends into the background; stronger contrast makes the message pop."
+          "&#x2705; Yes! The strong difference in color and size creates a clear focal point.",
+          "&#x274C; The lighter text blends into the background; stronger contrast makes the message pop."
          );
         --  ('Look at the layouts below. Which one feels cleaner and easier to follow?');
 

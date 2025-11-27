@@ -82,7 +82,7 @@ const sendUserResponse = (feedback, answers) => {
     const question = document.getElementById(`question${parsedIndex}-section`);
 
     const questionFeedbackSection = question.querySelector('.feedback p');
-    questionFeedbackSection.textContent = feedback[index];
+    questionFeedbackSection.innerHTML = feedback[index];
     questionFeedbackSection.style.display = 'inline-block';
   }
 };
