@@ -1,6 +1,10 @@
 <?php
   $path='../';
-  $pageStyles="<link rel=\"stylesheet\" href=\"{$path}assets/css/question.css\">";
+  $pageStyles="
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/question.css\">
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/modal.css\">
+  ";
+  $scripts="<script src=\"{$path}assets/scripts/quiz.js\" defer></script>";
   require_once($path.'database/connection.db.php');
   require_once($path.'assets/inc/utils.inc.php');
 
@@ -45,6 +49,9 @@
       </div>
     </div>
   </main>
+  <?php
+    include_once($path.'assets/inc/modal.inc.php');
+  ?>
 <?php
   require_once($path.'assets/inc/footer.inc.php');
 ?>

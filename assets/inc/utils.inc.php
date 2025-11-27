@@ -209,10 +209,8 @@
    */
   function getQuestionsFeedback(mysqli $mysqli) {
     $sql = "SELECT
-              JSON_OBJECT(
-                'correct', `correct_feedback`,
-                'incorrect', `incorrect_feedback`
-              ) as feedback
+              `incorrect_feedback`,
+              `correct_feedback`
             FROM questions
 
             ORDER BY `id`
@@ -232,7 +230,10 @@
 
     $feedback = [];
     while ($row = $result -> fetch_assoc()) {
-      $feedback[] = $row;
+      $feedback[] = [
+        $row['incorrect_feedback'],
+        $row['correct_feedback']
+      ];
     }
 
     $result -> free_result();

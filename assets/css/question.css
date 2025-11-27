@@ -17,6 +17,10 @@
   border-bottom: 2px solid var(--color-outline);
 }
 
+.question-section p:first-of-type {
+  margin-bottom: 0;
+}
+
 .question-images {
   display: flex;
   flex-direction: column;
@@ -24,6 +28,7 @@
 }
 
 .question-images figure {
+  height: fit-content;
   width: 100%;
   text-align: center;
 }
@@ -42,11 +47,17 @@
   padding: 0;
 }
 
-.question-section fieldset div {
+.question-choices fieldset div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
+}
+
+.feedback p {
+  display: none;
+  margin-top: 2rem;
+  font-weight: var(--font-weight-semibold);
 }
 
 #quiz button {
@@ -80,6 +91,10 @@
     padding: 1.5rem 2rem;
   }
 
+  .question-section p:first-of-type {
+    margin-bottom: 1rem;
+  }
+
   .question-images {
     flex-direction: row;
   }
@@ -87,7 +102,6 @@
   .question-images figure {
     align-items: flex-start; /* Always have images lined up */
     gap: 1rem;
-    height: clamp(250px, 10vh, 500px);
   }
 
   .question-images figure img {

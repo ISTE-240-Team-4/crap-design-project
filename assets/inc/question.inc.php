@@ -35,4 +35,8 @@
       ?>
     </fieldset>
   </div>
+
+  <div class="feedback">
+    <p></p>
+  </div>
 </section>
