@@ -32,7 +32,7 @@
         <?php include_once($path.'assets/inc/hero.inc.php'); ?>
 
         <!-- Introduction -->
-        <?php include($path.'assets/inc/intro.inc.php'); ?>
+        <?php include_once($path.'assets/inc/intro.inc.php'); ?>
 
         <!-- Quiz -->
         <form id="quiz" action="<?php echo $path; ?>assets/scripts/submitQuiz.php" method="post">
@@ -45,7 +45,7 @@
         </form>
 
         <!-- Summary & Conclusion -->
-        <?php include($path.'assets/inc/conclusion.inc.php'); ?>
+        <?php include_once($path.'assets/inc/conclusion.inc.php'); ?>
       </div>
     </div>
   </main>
