@@ -35,16 +35,16 @@
 
       <ul id="mobile-nav" class="mobile-nav" aria-hidden="true">
         <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>">LEARN</a></li>
-        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>">PRACTICE</a></li>
-        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>">QUIZ</a></li>
+        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'practice.php'; ?>">PRACTICE</a></li>
+        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'quiz.php'; ?>">QUIZ</a></li>
       </ul>
     </div>
 
     <div class="desktop-nav">
       <ul class="desktop-nav-links">
         <li class="learn"><a href="<?php echo strtolower($pageInfo['mode']) === 'learn' ? '#' : $path.'index.php'; ?>" onclick="() => delayedReroute()">LEARN</a></li>
-        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'pages/practice.php'; ?>" onclick="() => delayedReroute()">PRACTICE</a></li>
-        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'pages/quiz.php'; ?>" onclick="() => delayedReroute()">QUIZ</a></li>
+        <li class="practice"><a href="<?php echo strtolower($pageInfo['mode']) === 'practice' ? '#' : $path.'practice.php'; ?>" onclick="() => delayedReroute()">PRACTICE</a></li>
+        <li class="quiz"><a href="<?php echo strtolower($pageInfo['mode']) === 'quiz' ? '#' : $path.'quiz.php'; ?>" onclick="() => delayedReroute()">QUIZ</a></li>
       </ul>
     </div>
   </nav>

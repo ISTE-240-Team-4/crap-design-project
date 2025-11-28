@@ -1,5 +1,5 @@
 <?php
-  $path='../';
+  $path='./';
     $pageStyles="
     <link rel=\"stylesheet\" href=\"{$path}assets/css/principle.css\">
     <link rel=\"stylesheet\" href=\"{$path}assets/css/principleInteractions.css\">
