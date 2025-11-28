@@ -8,7 +8,7 @@
 
   // Consolidate all of the question values (0/INCORRECT or 1/CORRECT)
   $answers = [];
-  for ($index = 1; $index < 7; $index++) {
+  for ($index = 1; $index < count($questions) + 1; $index++) {
     $answers[] = $_POST["question$index"];
   }
 

@@ -152,10 +152,10 @@ INSERT INTO images (`file_path`, `caption`)
          ("assets/images/proximity-before.png", "The shapes are placed close together, making them appear as if they all belong to the same group."),
          ("assets/images/proximity-after.png", "Adding more space between them reveals separate groupings and creates a clear structure."),
          ("assets/images/q6optionA.png", "Option A"),
-         ("assets/images/q6optionB.png", "Option B");
-        --  ("assets/images/q7optionA.png", "Option A"),
-        --  ("assets/images/q7optionB.png", "Option B"),
-        --  ("assets/images/q7optionC.png", "Option C");
+         ("assets/images/q6optionB.png", "Option B"),
+         ("assets/images/q7optionA.png", "Option A"),
+         ("assets/images/q7optionB.png", "Option B"),
+         ("assets/images/q7optionC.png", "Option C");
 
 INSERT INTO principles (`name`, `interaction_heading`, `definition`, `before_image_id`, `after_image_id`, `application_steps`)
   VALUES (
@@ -235,8 +235,12 @@ INSERT INTO questions (`question`, `correct_feedback`, `incorrect_feedback`)
           "Which design uses contrast to emphasize hierarchy, not just decoration?",
           "&#x2705; Yes! The strong difference in color and size creates a clear focal point.",
           "&#x274C; The lighter text blends into the background; stronger contrast makes the message pop."
+         ),
+         (
+          "Look at the layouts below. Which design uses alignment to make the flow cleaner and easier to follow?",
+          "&#x2705; Indeed! Alignment creates more organized structure and balance.",
+          "&#x274C; See how the misaligned one feels messy? Good alignment keeps everything connected."
          );
-        --  ('Look at the layouts below. Which one feels cleaner and easier to follow?');
 
 INSERT INTO answers (`question_id`, `option`, `is_correct`)
   VALUES ("1", "Repetition", FALSE),
@@ -260,11 +264,14 @@ INSERT INTO answers (`question_id`, `option`, `is_correct`)
          ("5", "Both use color differences", FALSE),
          ("5", "Both mean the same thing", FALSE),
          ("6", "Design A — light gray text on white background", FALSE),
-         ("6", "Design B — bold black text on white background", TRUE);
+         ("6", "Design B — bold black text on white background", TRUE),
+         ("7", "Design A", FALSE),
+         ("7", "Design B", TRUE),
+         ("7", "Design C", FALSE);
 
 INSERT INTO question_images (`question_id`, `image_id`)
   VALUES ("6", "9"),
-         ("6", "10");
-        --  ("7", "11"),
-        --  ("7", "12"),
-        --  ("7", "13");
+         ("6", "10"),
+         ("7", "11"),
+         ("7", "12"),
+         ("7", "13");

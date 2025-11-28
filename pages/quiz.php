@@ -4,7 +4,10 @@
     <link rel=\"stylesheet\" href=\"{$path}assets/css/question.css\">
     <link rel=\"stylesheet\" href=\"{$path}assets/css/modal.css\">
   ";
-  $scripts="<script src=\"{$path}assets/scripts/quiz.js\" defer></script>";
+  $scripts="
+    <script src=\"{$path}assets/scripts/quiz.js\" defer></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js\"></script>
+  ";
   require_once($path.'database/connection.db.php');
   require_once($path.'assets/inc/utils.inc.php');
 
