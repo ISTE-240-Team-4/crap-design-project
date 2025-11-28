@@ -2,6 +2,7 @@ const modalOverlay = document.getElementById('modal-overlay');
 const modalScore = document.getElementById('modal-score');
 const modalMessage = document.getElementById('modal-message');
 const quizForm = document.getElementById('quiz');
+let intervals = [];
 
 /**
  * Response Structure
@@ -67,6 +68,15 @@ const sendUserResponse = (feedback, answers) => {
   let message = '';
   if (average === 1) {
     message += 'Congratulations, you got all of the questions right! You\'re a design principle genius. Now it\'s time to dive into real projects and show off your skills.';
+    intervals.push(
+      setInterval(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.4 }
+        });
+      }, 1000)
+    );
   } else if (average > 0.75) {
     message += 'Almost there! You\'re starting to really understand the nuances of each principle and when and how they are used. Continue practicing and feel free to retake the quiz.';
   } else {
@@ -98,4 +108,5 @@ quizForm.addEventListener('submit', (e) => {
 document.getElementById('modal-button').addEventListener('click', function (e) {
   e.preventDefault();
   modalOverlay.classList.toggle('active');
+  intervals.forEach(clearInterval);
 });
