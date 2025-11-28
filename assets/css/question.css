@@ -97,9 +97,11 @@
 
   .question-images {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .question-images figure {
+    width: 38%;
     align-items: flex-start; /* Always have images lined up */
     gap: 1rem;
   }
