@@ -94,7 +94,8 @@ const crapReset = () => {
   span3.textContent = "";
 
   heroContainer.style.backgroundColor = backgroundColor;
-  heroThis.style.color = textDark;
+
+  if (heroThis) heroThis.style.color = textDark;
   heroCrap.style.color = textDark;
 
   principleSectionTitles.forEach((title) => {
@@ -144,13 +145,13 @@ const applyStyles = (mode, eventType) => {
   contentsMenu.style.top = '90px';
 
   if (eventType === 'hover') {
-    heroThis.style.color = defaultStyles.heroThisColor;
+    if (heroThis) heroThis.style.color = defaultStyles.heroThisColor;
     heroCrap.style.color = defaultStyles.heroCrapColor;
   }
 
   if (eventType === 'click') {
     heroContainer.style.backgroundColor = extraStyles.heroContainerBg;
-    heroThis.style.color = extraStyles.heroThisColor;
+    if (heroThis) heroThis.style.color = extraStyles.heroThisColor;
     heroCrap.style.color = extraStyles.heroCrapColor;
     heroSubtitle.style.backgroundColor = extraStyles.heroSubtitleBg;
     heroSubtitle.style.color = extraStyles.heroSubtitleColor;
@@ -187,9 +188,18 @@ const delayedReroute = (e) => {
   }, 800);
 }
 
-learnLink.addEventListener('mouseenter', () => applyStyles('learn', 'hover'));
-practiceLink.addEventListener('mouseenter', () => applyStyles('practice', 'hover'));
-quizLink.addEventListener('mouseenter', () => applyStyles('quiz', 'hover'));
+learnLink.addEventListener('mouseenter', () => {
+  if (isRerouting) return;
+  applyStyles('learn', 'hover')
+});
+practiceLink.addEventListener('mouseenter', () => {
+  if (isRerouting) return;
+  applyStyles('practice', 'hover')
+});
+quizLink.addEventListener('mouseenter', () => {
+  if (isRerouting) return;
+  applyStyles('quiz', 'hover')
+});
 
 learnLink.addEventListener('click', (e) => {
   delayedReroute(e);

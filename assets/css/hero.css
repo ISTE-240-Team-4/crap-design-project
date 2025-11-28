@@ -40,6 +40,7 @@
 
 .hero-subtitle {
   text-align: center;
+  text-transform: uppercase;
   font-size: var(--font-size-heading-mobile);
   margin: 0;
   padding: 1rem;
