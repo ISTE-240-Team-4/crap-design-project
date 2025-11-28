@@ -1,10 +1,25 @@
 <?php
   $path='../';
+    $pageStyles="
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/principle.css\">
+    <link rel=\"stylesheet\" href=\"{$path}assets/css/principleInteractions.css\">
+  ";
+  $scripts="<script src=\"{$path}assets/scripts/principleInteractions.js\" defer></script>";
   require_once($path.'database/connection.db.php');
   require_once($path.'assets/inc/utils.inc.php');
 
   $pageInfo=getPageInfo($mysqli, 'practice');
   require_once($path.'assets/inc/nav.inc.php');
+
+  $contrastInfo=getPrincipleInfo($mysqli, 'contrast');
+  $repetitionInfo=getPrincipleInfo($mysqli, 'repetition');
+  $alignmentInfo=getPrincipleInfo($mysqli, 'alignment');
+  $proximityInfo=getPrincipleInfo($mysqli, 'proximity');
+
+  $contrastButtons=getPrincipleButtons($mysqli, 'contrast');
+  $repetitionButtons=getPrincipleButtons($mysqli, 'repetition');
+  $alignmentButtons=getPrincipleButtons($mysqli, 'alignment');
+  $proximityButtons=getPrincipleButtons($mysqli, 'proximity');
 ?>
   <?php include_once($path.'assets/inc/banner.inc.php'); ?>
 
@@ -29,6 +44,29 @@
 
         <!-- Introduction -->
         <?php include_once($path.'assets/inc/intro.inc.php'); ?>
+
+        <!-- Principles -->
+        <?php
+          $principleInfo=$contrastInfo;
+          $principleButtons=$contrastButtons;
+          $toggledClasses='size-active color-active';
+          include($path.'assets/inc/principle.inc.php');
+
+          $principleInfo=$repetitionInfo;
+          $principleButtons=$repetitionButtons;
+          $toggledClasses='typeface-active color-active';
+          include($path.'assets/inc/principle.inc.php');
+
+          $principleInfo=$alignmentInfo;
+          $principleButtons=$alignmentButtons;
+          $toggledClasses='elements-active text-active';
+          include($path.'assets/inc/principle.inc.php');
+
+          $principleInfo=$proximityInfo;
+          $principleButtons=$proximityButtons;
+          $toggledClasses='density-active spacing-active';
+          include($path.'assets/inc/principle.inc.php');
+        ?>
 
         <!-- Summary & Conclusion -->
         <?php include_once($path.'assets/inc/conclusion.inc.php'); ?>

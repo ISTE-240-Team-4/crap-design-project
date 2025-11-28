@@ -4,7 +4,7 @@
   }
 ?>
 
-<section id="<?php echo strtolower($principleInfo['name']); ?>" class="principle-section" aria-labelledby="<?php echo strtolower($principleInfo['name']); ?>-title">
+<section id="<?php echo strtolower($principleInfo['name']); ?>" class="principle-section <?php echo isset($toggledClasses) ? $toggledClasses : ''; ?>" aria-labelledby="<?php echo strtolower($principleInfo['name']); ?>-title">
   <h2 id="<?php echo strtolower($principleInfo['name']); ?>-title" class="section-title"><?php echo $principleInfo['name']; ?>.</h2>
   <div class="principle-container">
     <div class="principle-interaction">
