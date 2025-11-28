@@ -58,3 +58,15 @@
     width: 60vw;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  #modal {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  #modal {
+    width: 40vw;
+  }
+}

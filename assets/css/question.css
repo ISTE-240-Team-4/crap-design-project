@@ -114,3 +114,9 @@
     width: 30%;
   }
 }
+
+@media screen and (min-width: 850px) {
+  .question-images figure {
+    width: 36%;
+  }
+}
