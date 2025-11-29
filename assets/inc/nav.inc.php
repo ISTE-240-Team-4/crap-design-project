@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $pageInfo['title']; ?></title>
+  <link rel="icon" href="<?php echo $path; ?>assets/images/favicon.png">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/theme.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/grid.css">
   <link rel="stylesheet" href="<?php echo $path; ?>assets/css/animation.css">
