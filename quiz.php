@@ -1,5 +1,5 @@
 <?php
-  $path='../';
+  $path='./';
   $pageStyles="
     <link rel=\"stylesheet\" href=\"{$path}assets/css/question.css\">
     <link rel=\"stylesheet\" href=\"{$path}assets/css/modal.css\">

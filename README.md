@@ -24,7 +24,7 @@ Unlike lengthy blogs or abstract design theory resources, this platform focuses 
 
 ## Live Demo
 
-Visit the website here!
+Visit the [website](https://solace.ist.rit.edu/~iste240t42/)!
 
 ## Contributors
 
