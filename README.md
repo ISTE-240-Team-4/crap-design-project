@@ -63,7 +63,11 @@ docker run --name crap -p 45000:22 -p 45001:80 -d -it -v C:\path\to\crap-design-
 3. Add MySQL to Path
 
 ```shell
-export PATH="$PATH:/opt/lampp/bin" >> ~/.bashrc
+export PATH="$PATH:/opt/lampp/bin"
+
+OR
+
+echo $PATH:/opt/lampp/bin > ~/.bashrc
 source ~/.bashrc
 ```
 
