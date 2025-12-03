@@ -67,7 +67,7 @@ export PATH="$PATH:/opt/lampp/bin"
 
 OR
 
-echo $PATH:/opt/lampp/bin > ~/.bashrc
+echo "export PATH=$PATH:/opt/lampp/bin" >> ~/.bashrc
 source ~/.bashrc
 ```
 
